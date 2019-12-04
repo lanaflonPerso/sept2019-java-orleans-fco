@@ -17,7 +17,9 @@ public class User {
 	private String password;
 	private String role = "Member";
 	
+	
 	public User() {}
+	
 	
 	public String getFirstname() {
 		return firstname;
