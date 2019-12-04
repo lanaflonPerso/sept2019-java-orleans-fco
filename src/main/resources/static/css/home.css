@@ -80,32 +80,6 @@
 	margin-right: 10px;
 }
 
-/* Section Articles */
-
-.secArticle {
-	background-color: #F6F4EA;
-	height: 1500px;
-}
-
-/* Carousel */
-
-.carousel {
-	padding: 0 !important;
-	max-width: 1153px;
-}
-
-.carousel-control-next, .carousel-control-prev {
-	width: 10% !important;
-}
-
-.carousel-control-next-icon {
-	background-image: url("https://image.flaticon.com/icons/svg/339/339918.svg") !important;
-}
-
-.carousel-control-prev-icon {
-	background-image: url("https://image.flaticon.com/icons/svg/339/339876.svg") !important;
-}
-
 @media only screen and (max-width: 1400px) {
 	
 	.match-infos {
