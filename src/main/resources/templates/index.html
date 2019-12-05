@@ -56,7 +56,7 @@
 
 <div th:replace="fragment/layout.html :: script"></div>
 <script src="/js/matchCountdown.js"></script>
-<script th:text="|let countDownDate = ${nextMatch.matchDate.getTime()}|">
+<script th:text="|let countDownDate = ${nextMatch.timeUntilMatch}|">
 	let countDownDate = new Date('2020-12-25 00:00:00').getTime();
 </script>
 
