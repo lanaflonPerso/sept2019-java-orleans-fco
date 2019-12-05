@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head th:fragment="head">
+    <meta charset="utf-8">
+    <title>F.C.O St Jean de la Ruelle</title>
+    <meta content="" name="description">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sulphur+Point&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/adminlayout.css">
+</head>
+
+<body>
+
+<div th:fragment="sidebar" class="sidebar">
+	<h1><a class="return-to-site" href="/">Retour au site</a></h1>
+	<div class="side-list d-flex flex-column">
+		<a class="side-item" href="/admin">Tableau de bord</a>
+		<a class="side-item" href="/admin/next-match">Prochain Match</a>
+		<a class="side-item" href="/admin/articles">Articles</a>
+		<a class="side-item" href="/admin/sponsor">Partenaires</a>
+	</div>
+</div>
+
+<div class="main">
+
+</div>
+
+</body>
+
+</html>
