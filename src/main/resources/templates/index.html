@@ -25,13 +25,13 @@
 					</div>
 					<span class="match-vs d-flex justify-content-center">VS</span>
 					<div class="match-logos d-flex justify-content-center">
-						<img class="logos" th:src="${nextMatch.visiteurLogo}" alt="Logo F.C.O">
+						<img class="logos" th:src="${nextMatch.visiteurLogo}" th:alt="|Logo ${nextMatch.visiteurName}|">
 					</div>
 				</div>
 				<div class="match-clubs d-flex justify-content-center">
 					<span class="match-club">F.C.O</span>
 					<time class="match-date" th:text="${formatedMatchDate}">00 mon.</time>
-					<span class="match-club" th:text="${nextMatch.visiteurName}">F.C.O</span>
+					<span class="match-club" th:text="${nextMatch.visiteurName}">Visiteur</span>
 				</div>
 				<div class="match-countdown mt-5 d-flex justify-content-center align-items-center">
 					<span class="countdown-value" id="days">00</span>
@@ -56,7 +56,7 @@
 
 <div th:replace="fragment/layout.html :: script"></div>
 <script src="/js/matchCountdown.js"></script>
-<script th:text="|let countDownDate = ${nextMatch.matchDate.getTime()}|">
+<script th:text="|let countDownDate = ${nextMatch.timeUntilMatch}|">
 	let countDownDate = new Date('2020-12-25 00:00:00').getTime();
 </script>
 

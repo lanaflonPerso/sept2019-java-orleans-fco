@@ -1,6 +1,7 @@
 package com.wildcodeschool.fco.controller;
 
 import java.text.SimpleDateFormat;
+import java.util.Date;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,11 +19,12 @@ public class IndexController {
 	
 	@GetMapping("/")
 	public String toHome(Model model) {
-		Encounter encounter = encounterRepository.findTopByOrderByMatchDateDesc();
+		Encounter encounter = encounterRepository.findTopByOrderByTimeUntilMatchAsc();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd MMM");
-		String formatedMatchDate = formatter.format(encounter.getMatchDate());
+		String formatedMatchDate = formatter.format(encounter.getTimeUntilMatch());
 		model.addAttribute("nextMatch", encounter);
 		model.addAttribute("formatedMatchDate", formatedMatchDate);
+		System.out.println(new Date().getTime());
 		return "index";
 	}
 }

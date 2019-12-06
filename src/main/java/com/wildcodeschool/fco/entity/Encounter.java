@@ -1,7 +1,5 @@
 package com.wildcodeschool.fco.entity;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +12,7 @@ public class Encounter {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private Date matchDate;
+	private Long timeUntilMatch;
 	private String localTeam;
 	private String division;
 	private String visiteurName;
@@ -24,9 +22,9 @@ public class Encounter {
 	public Encounter() {}
 	
 	
-	public Encounter(Date matchDate, String localTeam, String division, String visiteurName, String visiteurLogo) {
+	public Encounter(Long timeUntilMatch, String localTeam, String division, String visiteurName, String visiteurLogo) {
 		super();
-		this.matchDate = matchDate;
+		this.timeUntilMatch = timeUntilMatch;
 		this.localTeam = localTeam;
 		this.division = division;
 		this.visiteurName = visiteurName;
@@ -40,11 +38,11 @@ public class Encounter {
 	public void setId(Integer id) {
 		this.id = id;
 	}
-	public Date getMatchDate() {
-		return matchDate;
+	public Long getTimeUntilMatch() {
+		return timeUntilMatch;
 	}
-	public void setMatchDate(Date matchDate) {
-		this.matchDate = matchDate;
+	public void setTimeUntilMatch(Long timeUntilMatch) {
+		this.timeUntilMatch = timeUntilMatch;
 	}
 	public String getLocalTeam() {
 		return localTeam;
