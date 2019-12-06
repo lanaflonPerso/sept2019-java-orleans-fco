@@ -9,4 +9,5 @@ import com.wildcodeschool.fco.entity.Encounter;
 public interface EncounterRepository extends JpaRepository<Encounter, Integer> {
 	
 	Encounter findTopByOrderByTimeUntilMatchAsc();
+
 }

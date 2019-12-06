@@ -13,7 +13,7 @@
 	<div class="content">
 		<div class="container my-5 col-10 offset-1">
 			<h2>Modifier le prochain Match</h2>
-			<form method="post" th:action=@{/admin/next-match} class="my-5">
+			<form method="post" th:action=@{/admin/next-match} enctype="multipart/form-data" class="my-5">
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="team-name">Nom de l'équipe locale</label>
