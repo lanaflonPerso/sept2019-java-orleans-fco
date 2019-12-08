@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>TODO supply a title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="stylePages/styleSponsor.css" rel="stylesheet">
+
+</head>
+<body>
+	<div class="firstLevelSponsor"  th:if="${sponsorList.size()>1}">
+	   <th:block th:each="i: ${#numbers.sequence(0, 1)}" >
+		<a  th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank"><img class="sponsorElement firstLevel" th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
+        </th:block>
+
+	</div>
+
+    <div class="secondLevelSponsor" th:if="${sponsorList.size()>2}">
+	   <th:block th:each="i: ${#numbers.sequence(2, sponsorList.size()-1)}"  >
+	   
+		<a th:if="${i<9}"th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank"><img class="sponsorElement secondLevel" th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
+        </th:block>
+
+	</div>
+
+
+	<script>
+		  
+      var myDiv = document.getElementsByClassName('sponsorElement');
+			var count = myDiv.length;
+			for (var i = 0; i < count; i += 1) {
+			myDiv[i].onclick = function() {
+			//alert(this.textContent);
+			};
+			}  
+		  
+		  
+		
+	</script>
+
+</body>
+</html>

@@ -28,7 +28,7 @@ public class SponsorController {
 
 	List<Sponsor> sponsorList;
 
-	@GetMapping("/")
+	@GetMapping("/s")
 	public String sponsorHome(Model model) {
 		sponsorList = repository.sponsorSortByPriority();
 		model.addAttribute("sponsorList", sponsorList);
