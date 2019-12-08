@@ -17,12 +17,11 @@ import org.springframework.web.multipart.MultipartFile;
 import com.wildcodeschool.fco.entity.Sponsor;
 import com.wildcodeschool.fco.repository.SponsorRepository;
 
-
 @Controller
 public class SponsorController {
 	public String uploadDirectory = System.getProperty("user.dir") + "/src/main/resources/static/img/photoSponsor";
 	private String uploadDirectoryForDelete = System.getProperty("user.dir") + "/src/main/resources/static/";
-	private int time =(int) (Math.random()*((4000 - 1000) +1 )) + 1000;
+	private int time = (int) (Math.random() * ((6000 - 1000) + 1)) + 1000;
 	@Autowired
 	private SponsorRepository repository;
 
@@ -40,8 +39,8 @@ public class SponsorController {
 	public String sponsorPage(Model model) {
 
 		sponsorList = repository.sponsorSortByPriority();
-		 System.out.println(sponsorList.size());
-		model.addAttribute("sponsorUpdated",new Sponsor(" "," "," ", 0));
+		System.out.println(sponsorList.size());
+		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
 		model.addAttribute("sponsorList", sponsorList);
 		return "sponsorPage";
 
@@ -50,23 +49,22 @@ public class SponsorController {
 	@PostMapping("/addSponsor")
 	public String addSponsor(Model model, @RequestParam int priority, @RequestParam String name,
 			@RequestParam MultipartFile photo, @RequestParam String urlPageSponsor) {
-       System.out.println("hello");
-		Path fileNameAndPath = Paths.get(uploadDirectory, photo.getOriginalFilename());
-	
-		try {
-			Files.write(fileNameAndPath, photo.getBytes());
-			Thread.sleep(this.time);
-		} catch (IOException e) {
-			System.out.println(e);
+		if (photo.getOriginalFilename().length() < 40) {
+			Path fileNameAndPath = Paths.get(uploadDirectory, photo.getOriginalFilename());
 
-		}
-		catch(InterruptedException e) {
-			e.printStackTrace();
-		}
+			try {
+				Files.write(fileNameAndPath, photo.getBytes());
+				Thread.sleep(this.time);
+			} catch (IOException e) {
+				System.out.println(e);
 
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
 		repository.save(new Sponsor(name, urlPageSponsor, "img/photoSponsor/" + photo.getOriginalFilename(), priority));
 		sponsorList = repository.sponsorSortByPriority();
-		model.addAttribute("sponsorUpdated",new Sponsor(" "," "," ", 0));
+		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
 		model.addAttribute("sponsorList", sponsorList);
 
 		return "sponsorPage";
@@ -82,32 +80,32 @@ public class SponsorController {
 		}
 		repository.delete(repository.getOne(sponsorId));
 		sponsorList = repository.sponsorSortByPriority();
-		model.addAttribute("sponsorUpdated",new Sponsor(" "," "," ", 0));
+		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
 		model.addAttribute("sponsorList", sponsorList);
 
 		return "sponsorPage";
 	}
+
 	@PostMapping("/retrieveSponsor")
 	public String retrieveSponsor(Model model, @RequestParam Long sponsorId) {
 
-		model.addAttribute("sponsorUpdated",repository.getOne(sponsorId) );
+		model.addAttribute("sponsorUpdated", repository.getOne(sponsorId));
 		sponsorList = repository.sponsorSortByPriority();
 		model.addAttribute("sponsorList", sponsorList);
 
 		return "sponsorPage";
 	}
+
 	@PostMapping("/updatSponsor")
 	public String updatSponsor(Model model, @RequestParam int priority, @RequestParam String name,
 			@RequestParam MultipartFile photo, @RequestParam String urlPageSponsor, @RequestParam Long sponsorId) {
 		Path fileNameAndPathOne = Paths.get(uploadDirectoryForDelete, repository.getOne(sponsorId).getUrlPhoto());
 		try {
 			Files.delete(fileNameAndPathOne);
-			
+
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		
-		
 
 		Path fileNameAndPath = Paths.get(uploadDirectory, photo.getOriginalFilename());
 		try {
@@ -116,15 +114,14 @@ public class SponsorController {
 		} catch (IOException e) {
 			System.out.println(e);
 
-		}
-		catch(InterruptedException e) {
+		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-        Sponsor s = new Sponsor(name, urlPageSponsor, "img/photoSponsor/" + photo.getOriginalFilename(), priority);
-        s.setId(sponsorId);
+		Sponsor s = new Sponsor(name, urlPageSponsor, "img/photoSponsor/" + photo.getOriginalFilename(), priority);
+		s.setId(sponsorId);
 		repository.save(s);
 		sponsorList = repository.sponsorSortByPriority();
-		model.addAttribute("sponsorUpdated",new Sponsor(" "," "," ", 0));
+		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
 		model.addAttribute("sponsorList", sponsorList);
 
 		return "sponsorPage";

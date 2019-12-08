@@ -4,22 +4,26 @@
 <title>TODO supply a title</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="stylePages/styleSponsor.css" rel="stylesheet">
+<link href="css/styleSponsor.css" rel="stylesheet">
 
 </head>
 <body>
-	<div class="firstLevelSponsor"  th:if="${sponsorList.size()>1}">
-	   <th:block th:each="i: ${#numbers.sequence(0, 1)}" >
-		<a  th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank"><img class="sponsorElement firstLevel" th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
-        </th:block>
+	<div class="firstLevelSponsor" th:if="${sponsorList.size()>1}">
+		<th:block th:each="i: ${#numbers.sequence(0, 1)}">
+			<a th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank"><img
+				class="sponsorElement firstLevel"
+				th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
+		</th:block>
 
 	</div>
 
-    <div class="secondLevelSponsor" th:if="${sponsorList.size()>2}">
-	   <th:block th:each="i: ${#numbers.sequence(2, sponsorList.size()-1)}"  >
-	   
-		<a th:if="${i<9}"th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank"><img class="sponsorElement secondLevel" th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
-        </th:block>
+	<div class="secondLevelSponsor" th:if="${sponsorList.size()>2}">
+		<th:block th:each="i: ${#numbers.sequence(2, sponsorList.size()-1)}">
+
+			<a th:if="${i<9}" th:href="@{${sponsorList[i].getUrlPageSponsor()}}"
+				target="_blank"><img class="sponsorElement secondLevel"
+				th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
+		</th:block>
 
 	</div>
 

@@ -1,113 +1,115 @@
 <!DOCTYPE html>
 <html lang="fr" xmlns:th="http://www.thymeleaf.or">
 <head>
-<title>TODO supply a title</title>
+<title>Sponsor</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="stylePages/styleSponsor.css" rel="stylesheet">
+<link href="css/styleSponsor.css" rel="stylesheet">
 
 
 </head>
 
-<body class="body" >
- <div class="backgroundCenter">
-   	<div class="firstPart">
-		<div th:each="sponsorlist : ${sponsorList}"  class = "blockSponsor">
-			<a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank"><img
-				class="sponsorElement masterPage"
-				th:src="@{${sponsorlist.getUrlPhoto()}}"></a>
-			<div class="modifySponsor">
-			<div th:text="${sponsorlist.getPriority()}" class="priorityBlockSponsor">10</div>
-				<form method="post" action="/retrieveSponsor#updateSponsor">
-					<input type="hidden" name="sponsorId"
-						th:value="${sponsorlist.getId()}">
-					<button type="submit">
-						<img src="img/photoButton/edit_h.png" alt="editPhoto" />
-					</button>
+<body class="body">
+	<div class="backgroundCenter">
+		<div class="firstPart">
+			<div th:each="sponsorlist : ${sponsorList}" class="blockSponsor">
+				<a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank"><img
+					class="sponsorElement masterPage"
+					th:src="@{${sponsorlist.getUrlPhoto()}}"></a>
+				<div class="modifySponsor">
+					<div th:text="${sponsorlist.getPriority()}"
+						class="priorityBlockSponsor">10</div>
+					<form method="post" action="/retrieveSponsor#updateSponsor">
+						<input type="hidden" name="sponsorId"
+							th:value="${sponsorlist.getId()}">
+						<button type="submit">
+							<img src="img/photoButton/edit_h.png" alt="editPhoto" />
+						</button>
+					</form>
+					<form method="post" action="/deleteSponsor">
+						<input type="hidden" name="sponsorId"
+							th:value="${sponsorlist.getId()}">
+						<button type="submit"
+							onclick="return confirm('comfirme la suppression  ?');">
+							<img src="img/photoButton/delete_h.png" alt="" />
+						</button>
+					</form>
+
+				</div>
+			</div>
+
+		</div>
+		<div class="secondPart">
+			<div class="addItem updateSponsor" id="updateSponsor">
+				<form method="post" action="/updatSponsor"
+					enctype="multipart/form-data">
+					<div>
+						<div>
+							<input type="hidden" name="sponsorId"
+								th:value="${sponsorUpdated.getId()}">
+						</div>
+						<div class="addSponsorName">
+							<label>le nom de sponsor :</label> <input type="text" name="name"
+								th:value="${sponsorUpdated.getName()}" required>
+						</div>
+
+						<div class="addSponsorPicture">
+							<label> la nouvelle photo :</label> <input type="file"
+								name="photo" multiple required>
+						</div>
+						<div class="addSponsorDescription">
+							<label>l'URL de sponsor :</label> <input type="text"
+								name="urlPageSponsor"
+								th:value="${sponsorUpdated.getUrlPageSponsor()}" required>
+						</div>
+					</div>
+					<div>
+						<div class="addSponsorPriority">
+							<input type="number" name="priority" min="0" max="10" step="1"
+								title="l'emplacement de sponsor dans la barre de sponsors"
+								placeholder="0 to 10" required
+								th:value="${sponsorUpdated.getPriority() }" />
+						</div>
+						<button value="submit">Modifier</button>
+					</div>
 				</form>
-				<form method="post" action="/deleteSponsor">
-					<input type="hidden" name="sponsorId"
-						th:value="${sponsorlist.getId()}">
-					<button type="submit"
-						onclick="return confirm('comfirme la suppression  ?');">
-						<img src="img/photoButton/delete_h.png" alt="" />
-					</button>
+			</div>
+
+			<div class="addItem" id="addItem">
+				<form method="post" action="/addSponsor"
+					enctype="multipart/form-data">
+					<div>
+						<div class="addSponsorName">
+							<input type="text" name="name" placeholder="Nom de sponsor"
+								required />
+						</div>
+						<div class="addSponsorPicture">
+							<label>La photo de sponsor :</label> <input type="file"
+								name="photo" multiple>
+						</div>
+						<div class="addSponsorDescription">
+							<input type="text" name="urlPageSponsor"
+								placeholder="URL de la page de sponsor (ex: https://cdn.pixabay.com/...)"
+								required />
+						</div>
+					</div>
+					<div>
+						<div class="addSponsorPriority">
+							<input type="number" name="priority" min="0" max="10" step="1"
+								title="l'emplacement de sponsor dans la barre de sponsors"
+								placeholder="0 to 10" required />
+						</div>
+						<button value="submit">Ajouter</button>
+					</div>
 				</form>
-				
+			</div>
+
+			<div class="add">
+				<a href="#addItem" id="addButton"><img
+					src="img/photoButton/plus.png" alt="" /></a>
+				<p>Ajouter un nouveau sponsor !</p>
 			</div>
 		</div>
-
 	</div>
-	<div class="secondPart">
-	<div class="addItem updateSponsor" id="updateSponsor">
-		<form method="post" action="/updatSponsor"
-			enctype="multipart/form-data">
-			<div>
-				<div>
-					<input type="hidden" name="sponsorId"
-						th:value="${sponsorUpdated.getId()}">
-				</div>
-				<div class="addSponsorName">
-					<label>le nom de sponsor :</label> <input type="text" name="name"
-						th:value="${sponsorUpdated.getName()}" required>
-				</div>
-
-				<div class="addSponsorPicture">
-					<label> la nouvelle photo :</label> <input type="file" name="photo"
-						multiple required>
-				</div>
-				<div class="addSponsorDescription">
-					<label>l'URL de sponsor :</label> <input type="text"
-						name="urlPageSponsor"
-						th:value="${sponsorUpdated.getUrlPageSponsor()}" required>
-				</div>
-			</div>
-			<div>
-				<div class="addSponsorPriority">
-					<input type="number" name="priority" min="0" max="10" step="1"
-						title="l'emplacement de sponsor dans la barre de sponsors"
-						placeholder="0 to 10" required
-						th:value="${sponsorUpdated.getPriority() }" />
-				</div>
-				<button value="submit">Modifier</button>
-			</div>
-		</form>
-	</div>
-
-	<div class="addItem" id="addItem">
-		<form method="post" action="/addSponsor" enctype="multipart/form-data">
-			<div>
-				<div class="addSponsorName">
-					<input type="text" name="name" placeholder="Nom de sponsor"
-						required />
-				</div>
-				<div class="addSponsorPicture">
-					<label>La photo de sponsor :</label> <input type="file"
-						name="photo" multiple>
-				</div>
-				<div class="addSponsorDescription">
-					<input type="text" name="urlPageSponsor"
-						placeholder="URL de la page de sponsor (ex: https://cdn.pixabay.com/...)"
-						required />
-				</div>
-			</div>
-			<div>
-				<div class="addSponsorPriority">
-					<input type="number" name="priority" min="0" max="10" step="1"
-						title="l'emplacement de sponsor dans la barre de sponsors"
-						placeholder="0 to 10" required />
-				</div>
-				<button value="submit">Ajouter</button>
-			</div>
-		</form>
-	</div>
-
-	<div class="add">
-		<a href="#addItem" id="addButton"><img
-			src="img/photoButton/plus.png" alt="" /></a>
-		<p>Ajouter un nouveau sponsor !</p>
-	</div>
-</div>
-</div>
 </body>
 </html>
