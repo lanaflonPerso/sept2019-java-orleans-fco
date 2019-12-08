@@ -1,4 +1,4 @@
-package com.wildcodeschool.fco;
+package com.wildcodeschool.fco.controller;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -14,6 +14,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.wildcodeschool.fco.entity.Sponsor;
+import com.wildcodeschool.fco.repository.SponsorRepository;
 
 
 @Controller
@@ -129,5 +131,3 @@ public class SponsorController {
 	}
 
 }
-
-
