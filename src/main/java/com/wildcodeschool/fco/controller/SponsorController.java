@@ -31,11 +31,11 @@ public class SponsorController {
 	public String sponsorHome(Model model) {
 		sponsorList = repository.sponsorSortByPriority();
 		model.addAttribute("sponsorList", sponsorList);
-		return "sponsor";
+		return "fragment/sponsor";
 
 	}
 
-	@GetMapping("/sponsor")
+	@GetMapping("/admin/sponsor")
 	public String sponsorPage(Model model) {
 
 		sponsorList = repository.sponsorSortByPriority();
@@ -46,7 +46,7 @@ public class SponsorController {
 
 	}
 
-	@PostMapping("/addSponsor")
+	@PostMapping("/admin/addSponsor")
 	public String addSponsor(Model model, @RequestParam int priority, @RequestParam String name,
 			@RequestParam MultipartFile photo, @RequestParam String urlPageSponsor) {
 		if (photo.getOriginalFilename().length() < 40) {
@@ -62,7 +62,7 @@ public class SponsorController {
 				e.printStackTrace();
 			}
 		}
-		repository.save(new Sponsor(name, urlPageSponsor, "img/photoSponsor/" + photo.getOriginalFilename(), priority));
+		repository.save(new Sponsor(name, urlPageSponsor, "/img/photoSponsor/" + photo.getOriginalFilename(), priority));
 		sponsorList = repository.sponsorSortByPriority();
 		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
 		model.addAttribute("sponsorList", sponsorList);
@@ -70,7 +70,7 @@ public class SponsorController {
 		return "sponsorPage";
 	}
 
-	@PostMapping("/deleteSponsor")
+	@PostMapping("/admin/deleteSponsor")
 	public String deletSponsor(Model model, @RequestParam Long sponsorId) {
 		Path fileNameAndPath = Paths.get(uploadDirectoryForDelete, repository.getOne(sponsorId).getUrlPhoto());
 		try {
@@ -86,7 +86,7 @@ public class SponsorController {
 		return "sponsorPage";
 	}
 
-	@PostMapping("/retrieveSponsor")
+	@PostMapping("/admin/retrieveSponsor")
 	public String retrieveSponsor(Model model, @RequestParam Long sponsorId) {
 
 		model.addAttribute("sponsorUpdated", repository.getOne(sponsorId));
@@ -96,7 +96,7 @@ public class SponsorController {
 		return "sponsorPage";
 	}
 
-	@PostMapping("/updatSponsor")
+	@PostMapping("/admin/updatSponsor")
 	public String updatSponsor(Model model, @RequestParam int priority, @RequestParam String name,
 			@RequestParam MultipartFile photo, @RequestParam String urlPageSponsor, @RequestParam Long sponsorId) {
 		Path fileNameAndPathOne = Paths.get(uploadDirectoryForDelete, repository.getOne(sponsorId).getUrlPhoto());
@@ -117,7 +117,7 @@ public class SponsorController {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		Sponsor s = new Sponsor(name, urlPageSponsor, "img/photoSponsor/" + photo.getOriginalFilename(), priority);
+		Sponsor s = new Sponsor(name, urlPageSponsor, "/img/photoSponsor/" + photo.getOriginalFilename(), priority);
 		s.setId(sponsorId);
 		repository.save(s);
 		sponsorList = repository.sponsorSortByPriority();
