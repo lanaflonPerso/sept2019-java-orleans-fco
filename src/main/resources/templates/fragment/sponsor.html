@@ -7,10 +7,12 @@
 <link href="css/styleSponsor.css" rel="stylesheet">
 
 </head>
-<body>
+<body >
+  <section  th:fragment="sponsor" >
 	<div class="firstLevelSponsor" th:if="${sponsorList.size()>1}">
 		<th:block th:each="i: ${#numbers.sequence(0, 1)}">
-			<a th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank"><img
+			<a th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank" class= "img-fluid img-responsive">
+			<img
 				class="sponsorElement firstLevel"
 				th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
 		</th:block>
@@ -41,6 +43,8 @@
 		  
 		
 	</script>
+	
+</section>
 
 </body>
 </html>
