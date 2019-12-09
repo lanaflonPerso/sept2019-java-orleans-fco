@@ -4,7 +4,7 @@
 <title>Sponsor</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="css/styleSponsor.css" rel="stylesheet">
+<link href="/css/styleSponsor.css" rel="stylesheet">
 
 
 </head>
@@ -13,25 +13,25 @@
 	<div class="backgroundCenter">
 		<div class="firstPart">
 			<div th:each="sponsorlist : ${sponsorList}" class="blockSponsor">
-				<a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank"><img
-					class="sponsorElement masterPage"
-					th:src="@{${sponsorlist.getUrlPhoto()}}"></a>
+				<a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank">
+				<img class="sponsorElement masterPage" th:src="@{${sponsorlist.getUrlPhoto()}}">
+				</a>
 				<div class="modifySponsor">
 					<div th:text="${sponsorlist.getPriority()}"
 						class="priorityBlockSponsor">10</div>
-					<form method="post" action="/retrieveSponsor#updateSponsor">
+					<form method="post" action="/admin/retrieveSponsor#updateSponsor">
 						<input type="hidden" name="sponsorId"
 							th:value="${sponsorlist.getId()}">
 						<button type="submit">
-							<img src="img/photoButton/edit_h.png" alt="editPhoto" />
+							<img src="/img/photoButton/edit_h.png" alt="editPhoto" />
 						</button>
 					</form>
-					<form method="post" action="/deleteSponsor">
+					<form method="post" action="/admin/deleteSponsor">
 						<input type="hidden" name="sponsorId"
 							th:value="${sponsorlist.getId()}">
 						<button type="submit"
 							onclick="return confirm('comfirme la suppression  ?');">
-							<img src="img/photoButton/delete_h.png" alt="" />
+							<img src="/img/photoButton/delete_h.png" alt="" />
 						</button>
 					</form>
 
@@ -41,7 +41,7 @@
 		</div>
 		<div class="secondPart">
 			<div class="addItem updateSponsor" id="updateSponsor">
-				<form method="post" action="/updatSponsor"
+				<form method="post" action="/admin/updatSponsor"
 					enctype="multipart/form-data">
 					<div>
 						<div>
@@ -76,7 +76,7 @@
 			</div>
 
 			<div class="addItem" id="addItem">
-				<form method="post" action="/addSponsor"
+				<form method="post" action="/admin/addSponsor"
 					enctype="multipart/form-data">
 					<div>
 						<div class="addSponsorName">
@@ -106,7 +106,7 @@
 
 			<div class="add">
 				<a href="#addItem" id="addButton"><img
-					src="img/photoButton/plus.png" alt="" /></a>
+					src="/img/photoButton/plus.png" alt="" /></a>
 				<p>Ajouter un nouveau sponsor !</p>
 			</div>
 		</div>
