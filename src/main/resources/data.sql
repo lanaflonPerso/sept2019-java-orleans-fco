@@ -1,0 +1,1 @@
+INSERT INTO encounter VALUES (1, "Régionale 1", "Equipe Futsal", 1577228400000, "/img/chateauroux.jpg", "Chateauroux Etoile");
