@@ -83,72 +83,6 @@ body{
     height: 100px;
 }
 
-@media screen and (max-width:1176px) {
-	.secondLevelSponsor {
-		height: 240px;
-	}
-}
-.blockSponsor{
-	display: flex;
-	border: 1px solid #D74850; 
-	background: #F6F4EA;
-	box-shadow: 1px 1px 3px;
-	justify-content:space-between;
-	margin:10px 0;
-	width: 258px;
-}
-.priorityBlockSponsor {
-    text-align: end;
-    margin-right: 10px;
-    margin-bottom: 17px;
-}
-.firstPart{
-width: 100%;
-display: flex;
-flex-wrap: wrap;
-justify-content: space-around;
-}
-.secodPart{
-	width: 30%;
-}
-
-@media screen and (max-width:777px) {
-	.secondLevelSponsor {
-		height: 355px;
-	}
-	.body{
-	display: block;
-	}
-}
-
-@media screen and (max-width:550px) {
-	.secondLevelSponsor {
-		height: 480px;
-	}
-}
-
-@media screen and (max-width:382px) {
-	.secondLevelSponsor {
-		height: 481px;
-	}
-	.firstLevelSponsor{
-	height: 212px;
-	}
-	.sponsorElement {
-    padding: 0;
-    margin: 10px 20px;
-    height: 66px;
-    }
-}
-
-@media screen and (max-width:375px) {
-     .secondLevelSponsor {
-		height: 650px;
-	}
-}
-
-
---
 .addSponsorName input, .addSponsorPriority input, .add p {
 	font-family: 'Shadows Into Light', cursive;
 }
@@ -264,6 +198,75 @@ justify-content: space-around;
 	font-weight: bold;
 	font-size: 1.2em;
 }
+
+.blockSponsor{
+	display: flex;
+	border: 1px solid #D74850; 
+	background: #F6F4EA;
+	box-shadow: 1px 1px 3px;
+	justify-content:space-between;
+	margin:10px 0;
+	width: 258px;
+}
+.priorityBlockSponsor {
+    text-align: end;
+    margin-right: 10px;
+    margin-bottom: 17px;
+}
+.firstPart{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.secodPart{
+	width: 30%;
+}
+
+@media screen and (max-width:1176px) {
+	.secondLevelSponsor {
+		height: 240px;
+	}
+}
+
+
+@media screen and (max-width:777px) {
+	.secondLevelSponsor {
+		height: 400px;
+	}
+	.body{
+	display: block;
+	}
+}
+
+@media screen and (max-width:550px) {
+	.secondLevelSponsor {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width:382px) {
+	.secondLevelSponsor {
+		height: 370px;
+	}
+	
+	.sponsorElement {
+    padding: 0;
+    margin: 10px 20px;
+    height: 60px;
+    }
+}
+
+@media screen and (max-width:375px) {
+     .secondLevelSponsor {
+		height: 370px;
+	}
+	
+}
+
+
+--
+
 
 @media screen and (max-width:960px) {
 	.add, .addItem:target, .status {
