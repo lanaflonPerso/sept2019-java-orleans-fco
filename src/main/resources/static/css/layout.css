@@ -18,6 +18,10 @@ a, a:hover {
 	color: inherit;
 }
 
+i:hover {
+	color: #DC143C;
+}
+
 /* Header & navbar */
 
 header {
