@@ -27,14 +27,6 @@ public class SponsorController {
 
 	List<Sponsor> sponsorList;
 
-	@GetMapping("/s")
-	public String sponsorHome(Model model) {
-		sponsorList = repository.sponsorSortByPriority();
-		model.addAttribute("sponsorList", sponsorList);
-		return "fragment/sponsor";
-
-	}
-
 	@GetMapping("/admin/sponsor")
 	public String sponsorPage(Model model) {
 
