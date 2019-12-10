@@ -174,19 +174,16 @@ footer .logo {
 	height: auto;
 }
 
-@media (min-width: 260px) and (max-width: 767.98px) {
+@media (min-width: 260px) and (max-width: 767px) {
 
+	
 	.container-fluid{
-    text-align: center;
+	    text-align: center;
 	}
     .logo {
         width: 200px;
         height: auto;
         margin-top: 30px;
-    }
-
-    .join-us {
-        margin-top : 30px;
     }
     .linkImg,.join-us {
         display: none;
@@ -199,53 +196,11 @@ footer .logo {
     
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) { 
-	footer nav a{
-	font-size:1em;
-	}
-    .logo {
-        width: 100%;
-        max-width: 60%;
-        padding-right: 10%;
-        margin-top: 5px;
-    }
-    
-    .footerLogoBaniere {
-    	display:flex;
-    	flex-direction:column;
-    	justify-content:center;
-    }
-    
-    .footerNavLink nav a{
-	width: min-content;
-	}
-    .fff,.district{
-        max-height: 82px;
-        width: auto;
-    }
-    .linkImg {
-        margin-bottom: 30px;
-    }
-    .join-us {
-        margin-top:20px;
-    }
-    .fb {
-    	padding:10%;
-    }
-    
-    .centre {
-    	padding:20%;
-    }
-    
-    .footClubsLi {
-    	margin-left:25%;
-    }
-}
 
-@media (min-width: 992px) and (max-width: 1199.98px) {
+@media (min-width: 768px) and (max-width: 1199.98px) {
     
     .linkImg {
-        height: 70px;
+        height: 90px;
         width: auto;
         padding:13%;
         
