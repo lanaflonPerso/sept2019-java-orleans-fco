@@ -100,4 +100,199 @@ header {
 	width: 60px;
 }
 
+
+/*------footer-------*/
+
+footer img {
+    width: 100%;
+    text-align: center;
+}
+
+footer ul{
+    list-style: none;
+}
+footer li {
+   width: 100%;
+  
+}
+.container-fluid {
+    background-color: #323441;
+    border-top:2px solid #DC143C;
+}
+
+footer li a{
+    color:#F6F4EA;
+    text-decoration: none;
+    line-height: 1.66;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+footer li a:hover {
+    color:#DC143C;
+    transition: 300ms;
+    text-decoration: none;
+    
+}
+
+footer li img {
+    text-align: center;
+}
+footer h3{
+    text-transform: uppercase;
+    color: rgba(228, 221, 211, 0.568);
+    font-size: 1.1rem;
+    line-height: 2.14;
+    font-weight: bolder;
+    margin-bottom:0;
+    
+}
+
+.test {
+    display: flex;
+    width: 100%;
+}
+
+footer .logo {
+	margin-top:20px;
+	margin-bottom:20px;
+}
+
+.footerNavLink nav a{
+	width: min-content;
+}
+
+.footerLogoBaniere {
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	
+}
+
+.footclub {
+	width: 30%;
+	height: auto;
+}
+
+@media (min-width: 260px) and (max-width: 767.98px) {
+
+	.container-fluid{
+    text-align: center;
+	}
+    .logo {
+        width: 200px;
+        height: auto;
+        margin-top: 30px;
+    }
+
+    .join-us {
+        margin-top : 30px;
+    }
+    .linkImg,.join-us {
+        display: none;
+    }
+    
+    .footClubsLiRow {
+    	display: none;
+    }
+    
+    
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+	footer nav a{
+	font-size:1em;
+	}
+    .logo {
+        width: 100%;
+        max-width: 60%;
+        padding-right: 10%;
+        margin-top: 5px;
+    }
+    
+    .footerLogoBaniere {
+    	display:flex;
+    	flex-direction:column;
+    	justify-content:center;
+    }
+    
+    .footerNavLink nav a{
+	width: min-content;
+	}
+    .fff,.district{
+        max-height: 82px;
+        width: auto;
+    }
+    .linkImg {
+        margin-bottom: 30px;
+    }
+    .join-us {
+        margin-top:20px;
+    }
+    .fb {
+    	padding:10%;
+    }
+    
+    .centre {
+    	padding:20%;
+    }
+    
+    .footClubsLi {
+    	margin-left:25%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    
+    .linkImg {
+        height: 70px;
+        width: auto;
+        padding:13%;
+        
+    }
+    
+}
+
+@media (min-width:1200px) and (max-width:1362px){
+    .logo {
+    	padding:5%;
+    }
+    
+    .centre {
+    	padding:20%;
+    }
+    .fff,.district{
+        padding:25%;
+    }
+    
+    .footerLogoBaniere {
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    }
+}
+
+@media (min-width:1363px)  {
+    .centre {
+        width:60%;
+        height:auto;
+    }
+    
+    footer .logo {
+    	width:145px;
+    	height:auto;
+    }
+    
+    .fff,.district{
+        max-height: 82px;
+        width: auto;
+    }
+    .linkImg {
+        margin-bottom: 30px;
+    }
+    .join-us {
+        margin-top:20px;
+    }
+    footer li img {
+    	text-align:center;
+    }
 }
