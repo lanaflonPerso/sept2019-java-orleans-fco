@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head>
+
+	<head th:replace="fragment/adminlayout.html :: head"></head>
+</head>
+
+<body>
+
+	<div th:replace="fragment/adminlayout.html :: sidebar"></div>
+	<div class="content">
+		<p>That's works!</p>
+		<h3>Article</h3>
+		<a href="/wizard">Add a new wizard !</a> <br>
+		<br>
+		<table>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Auteur</th>
+					<th>Titre</th>
+					<th>Contenue</th>
+					<th>Date</th>
+					<th>Contenue</th>
+					<th></th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="article : ${articlesRepo.findAll()}">
+					<td th:text="${article.id}">id</td>
+					<td th:text="${article.Author}">Auteur</td>
+					<td th:text="${article.title}">Titre</td>
+					<td th:text="${article.content}">contenue</td>
+					<td th:text="${article.date}">date de Création / Modification</td>
+					<td th:text="${article.picture}">Image</td>
+					<td><a th:href="@{/article(id=${article.id})}">Editer</a></td>
+					<td><a th:href="@{/article/delete(id=${article.id})}">supprimer</a></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+	</div>
+
+</body>
+
+</html>
