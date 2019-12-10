@@ -19,14 +19,14 @@
 				<div class="modifySponsor">
 					<div th:text="${sponsorlist.getPriority()}"
 						class="priorityBlockSponsor">10</div>
-					<form method="post" action="/admin/retrieveSponsor#updateSponsor">
+					<form method="post" th:action="@{/admin/retrieveSponsor#updateSponsor}">
 						<input type="hidden" name="sponsorId"
 							th:value="${sponsorlist.getId()}">
 						<button type="submit">
 							<img src="/img/photoButton/edit_h.png" alt="editPhoto" />
 						</button>
 					</form>
-					<form method="post" action="/admin/deleteSponsor">
+					<form method="post" th:action="@{/admin/deleteSponsor}">
 						<input type="hidden" name="sponsorId"
 							th:value="${sponsorlist.getId()}">
 						<button type="submit"
@@ -41,7 +41,7 @@
 		</div>
 		<div class="secondPart">
 			<div class="addItem updateSponsor" id="updateSponsor">
-				<form method="post" action="/admin/updatSponsor"
+				<form method="post" th:action="@{/admin/updatSponsor}"
 					enctype="multipart/form-data">
 					<div>
 						<div>
@@ -76,7 +76,7 @@
 			</div>
 
 			<div class="addItem" id="addItem">
-				<form method="post" action="/admin/addSponsor"
+				<form method="post" th:action="@{/admin/addSponsor}"
 					enctype="multipart/form-data">
 					<div>
 						<div class="addSponsorName">
