@@ -1,0 +1,145 @@
+body{
+	background-color:#E4DDD3;
+}
+.mainArticle{
+	padding: 0;
+}
+.bodyCard{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 100%;
+	bottom : 0;
+}
+.mainArticle h2{
+	display: flex;
+	flex: start;
+}
+.thumbnail {
+	overflow:hidden;  
+	max-height: 650px;
+	position: relative;
+}
+.content h2 ,h3{
+	font-size: 1vw;
+}
+.update{
+	font-size: 0.7vw;
+	color: #8290AD;
+}
+.content-card{
+	text-align: center;
+	align-items: center;
+}
+.category{
+	color : #D74850;
+}
+.mainArticle .caption {
+	background: linear-gradient(rgba(50,50,50,0),rgba(50,50,50,1));
+    position: absolute;
+    width: 100%;
+    height : 100%;
+	bottom:0;
+}
+.contentCard{
+	align-items: flex-end;
+}
+.cardTitle {
+	margin-top: 15px;
+}
+.border{
+	border-width:3pt !important;
+	border-color: #E4DDD3 !important;
+}
+.titleMainArticle {
+	display:flex;
+	align-items: flex-end;
+	margin-left :1%;
+	color : whitesmoke;
+	font-size: 17pt;
+	bottom:0;
+	position : absolute;
+	font-family: 'Bebas Neue';
+	letter-spacing: 1pt;
+}
+.titleMainArticle p{
+	color:#F6F4EA;
+}
+.thirdCard{
+	border : 2px, solid , #8290AD;
+	background-color:white;
+	padding : 0;
+}
+.img-card{
+	text-align:center;
+	position:center;
+	max-width: auto;
+}
+
+.visualArticle:hover img{
+	
+	transform:scale(1.2);
+	transition: all 3000ms ease;
+}
+.visualArticle img{
+	transition: all 3000ms;
+}
+/*VERSION SMARRPHONE*/
+@media screen and (max-width: 574px)
+{
+	.content h2, h3{
+		font-size: 4vw;
+	}
+	.mainArticle h2, h3{
+		font-size: 4vw;
+		text-align: center;
+		display: inline;
+	}
+	.thirdCard {
+		margin-top : 1vh;
+		display: flex;
+		flex-direction: row;
+	}
+	.thirdCard .thumbnail{
+		max-width: 30vw;
+		align-items: center;
+		height:100%;
+		margin: auto;
+		
+	}
+	.thirdCard .thumbnail img {
+		height:20vh;
+		overflow: hidden;
+		margin: auto;
+		position: relative;
+	}
+	.category{
+		margin :0;
+		bottom: 0;
+		text-align: center;
+		font-size: 2vw;
+	}
+    .update{
+		font-size: 1.5vw;
+		margin-bottom: 0.2vh;
+	}
+}
+/*VERSION TABLETTE*/
+@media screen and (min-width : 574px) and (max-width: 1200px){
+	.content h2, h3{
+		font-size: 12pt;
+	}
+	.mainArticle h2, h3{
+		font-size: 12pt;
+		text-align: center;
+		display: inline;
+	}	
+	.update{
+		font-size: 1.5vw;
+	}
+	.category {
+		font-size: 1.7vw;
+	}
+
+}
+

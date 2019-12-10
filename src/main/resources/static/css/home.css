@@ -80,14 +80,7 @@
 	margin-right: 10px;
 }
 
-@media only screen and (max-width: 1400px) {
-	
-	.match-infos {
-		padding-top: 20px;
-	}
-}
-
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 1200px) {
 	
 	.first-article {
 		flex: 0 0 100% !important;
