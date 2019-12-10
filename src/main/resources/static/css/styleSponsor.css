@@ -1,0 +1,287 @@
+body{
+	margin: 0;
+}
+.body {
+	margin: 0;
+	background: #323441;
+}
+.backgroundCenter{
+	display: flex;
+	flex-direction:column;
+	justify-content:space-around;
+	width: 80%;
+	margin-left: 10%;
+	
+	background-color:rgba(228,221,221,1);
+	border: 2px solid #D74850;
+	box-shadow: 1px 1px 3px;
+
+}
+.firstLevelSponsor {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #F6F4EA;
+	flex-wrap: wrap;
+	height: 127px;
+}
+
+.firstLevel {
+	background: #F6F4EA;
+}
+
+.secondLevel {
+	background: #323441;
+	width: auto;
+}
+
+.modifySponsor {
+	display: flex;
+	flex-direction:column;
+	justify-content: center;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.modifySponsor button {
+	border: none;
+	background-color: transparent;
+}
+
+.modifySponsor img {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	filter: brightness(0);
+}
+
+.modifySponsor img:hover {
+	filter: brightness(5);
+}
+
+.secondLevelSponsor {
+	display: flex;
+	flex-wrap: wrap;
+	background: #323441;
+	align-items: center;
+	justify-content: space-around;
+
+  
+
+}
+
+
+.sponsorElement {
+	padding: 0;
+	margin: 10px 20px ;
+	height: 75px;
+}
+
+.masterPage {
+	margin: 10px;
+	width: 190px;
+    height: 100px;
+}
+
+.addSponsorName input, .addSponsorPriority input, .add p {
+	font-family: 'Shadows Into Light', cursive;
+}
+
+.add {
+	box-shadow: 1px 1px 3px;
+	margin: 20px auto;
+	width: 46%;
+	display: flex;
+	align-items: center;
+	height: 70px;
+	background: #F6F4EA;
+}
+
+.add a {
+	margin-left: 5px;
+	height: 50px;
+	min-width: 50px;
+}
+
+.add a:hover {
+	width: 52px;
+	height: 52px;
+}
+
+.add img {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.add p {
+	font-size: 1.2em;
+	margin-left: 20px;
+}
+
+.add a:hover+p {
+	margin-left: 18px;
+}
+
+.addItem {
+	display: none;
+}
+
+.topBody:target .updateItem {
+	display: block;
+	margin: 20px auto;
+	width: 60%;
+	box-shadow: 1px 1px 3px;
+	padding: 10px;
+	min-height: 180px;
+}
+
+.addItem:target+.add, .topBody:target .add {
+	display: none;
+}
+
+.addItem:target {
+	display: block;
+	margin: 20px auto;
+	width: 44.5%;
+	box-shadow: 1px 1px 3px;
+	padding: 10px;
+	min-height: 180px;
+	background: #F6F4EA;
+}
+
+.addItem form {
+	display: flex;
+	justify-content: space-between;
+	min-height: 180px;
+}
+
+.addItem form>div:first-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 60%;
+}
+
+.addItem form>div:last-of-type {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+
+.addSponsorName input, .addSponsorDescription input, .addSponsorPriority input,
+	.addSponsorPicture input {
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px #EEEEEE solid;
+	width: 100%;
+	font-size: 1rem;
+}
+
+.addSponsorName input {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.addSponsorPicture {
+	display: flex;
+	flex-direction: column;
+}
+
+.addSponsorPriority input {
+	text-align: center;
+	font-size: 1.2em;
+}
+
+.addItem button {
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.blockSponsor{
+	display: flex;
+	border: 1px solid #D74850; 
+	background: #F6F4EA;
+	box-shadow: 1px 1px 3px;
+	justify-content:space-between;
+	margin:10px 0;
+	width: 258px;
+}
+.priorityBlockSponsor {
+    text-align: end;
+    margin-right: 10px;
+    margin-bottom: 17px;
+}
+.firstPart{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+.secodPart{
+	width: 30%;
+}
+
+@media screen and (max-width:1176px) {
+	.secondLevelSponsor {
+		height: 240px;
+	}
+}
+
+
+@media screen and (max-width:777px) {
+	.secondLevelSponsor {
+		height: 400px;
+	}
+	.body{
+	display: block;
+	}
+}
+
+@media screen and (max-width:550px) {
+	.secondLevelSponsor {
+		height: 400px;
+	}
+}
+
+@media screen and (max-width:382px) {
+	.secondLevelSponsor {
+		height: 370px;
+	}
+	
+	.sponsorElement {
+    padding: 0;
+    margin: 10px 20px;
+    height: 60px;
+    }
+}
+
+@media screen and (max-width:375px) {
+     .secondLevelSponsor {
+		height: 370px;
+	}
+	
+}
+
+
+@media screen and (max-width:960px) {
+	.add, .addItem:target, .status {
+		margin: 20px auto;
+		width: 90%;
+	}
+	.addItem form {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+	.addItem form>div:first-of-type {
+		width: 100%;
+	}
+	.addItem form>div:last-of-type {
+		flex-direction: row;
+		width: 100%;
+	}
+	.addItem form input, .addItem form textarea {
+		margin-bottom: 15px;
+	}
+}
