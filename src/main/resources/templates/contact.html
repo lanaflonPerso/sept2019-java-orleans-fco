@@ -37,9 +37,9 @@
 		</div>
 	</section>
 	<section class="secForm py-5">
-		<div class="container my-5">
-			<h2>Nous Contacter</h2>
-			<form class="contactForm" method="post" th:action=@{/contact}>
+		<div class="container my-5 d-flex flex-column align-items-center">
+			<h2 class="contactTitle formTitle">Nous Contacter</h2>
+			<form class="contactForm col-12" method="post" th:action=@{/contact}>
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="contact-firstname">Prénom</label>
@@ -49,6 +49,17 @@
 						<label for="contact-lastname">Nom</label>
 						<input type="text" class="form-control" id="contact-lastname" name="lastName" placeholder="Doe" required>
 					</div>
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Adresse mail</label>
+					<input type="email" class="form-control" id="contact-email" name="email" placeholder="xyz@gmail.com" required>
+				</div>
+				<div class="form-group">
+					<label for="contact-message">Message</label>
+					<textarea class="form-control" id="contact-message" name="message" placeholder="Votre message" maxlength="1000" required></textarea>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn my-1">Envoyer</button>
 				</div>
 			</form>
 		</div>

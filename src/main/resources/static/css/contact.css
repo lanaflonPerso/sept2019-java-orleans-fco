@@ -47,6 +47,24 @@ iframe {
 	border-radius: 12px;
 }
 
+.formTitle {
+	color: #fff;
+}
+
+label {
+	color: #fff;
+}
+
+textarea {
+	height: 200px;
+}
+
+.btn {
+	background-color: #DC143C;
+	color: #fff;
+	letter-spacing: 1px;
+}
+
 @media only screen and (max-width: 991px) {
 
 	.plan {
