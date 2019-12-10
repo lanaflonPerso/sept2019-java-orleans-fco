@@ -36,10 +36,10 @@
 			</div>
 		</div>
 	</section>
-	<section class="secForm py-5">
+	<section class="secForm py-5" id="form">
 		<div class="container my-5 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
 			<h2 class="contactTitle formTitle">Nous Contacter</h2>
-			<form class="contactForm col-12" method="post" th:action=@{/contact}>
+			<form class="contactForm col-12" method="post" th:action=@{/contact#form}>
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="contact-firstname">Prénom</label>
@@ -69,5 +69,4 @@
 </body>
 
 <div th:replace="fragment/layout.html :: script"></div>
-
 </html>

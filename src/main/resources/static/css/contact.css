@@ -65,6 +65,10 @@ textarea {
 	letter-spacing: 1px;
 }
 
+.btn:hover {
+	background-color: #DC1432;
+}
+
 @media only screen and (max-width: 991px) {
 
 	.plan {
