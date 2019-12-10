@@ -265,9 +265,6 @@ justify-content: space-around;
 }
 
 
---
-
-
 @media screen and (max-width:960px) {
 	.add, .addItem:target, .status {
 		margin: 20px auto;
