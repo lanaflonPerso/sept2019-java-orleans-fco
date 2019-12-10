@@ -37,26 +37,26 @@
 		</div>
 	</section>
 	<section class="secForm py-5">
-		<div class="container my-5 d-flex flex-column align-items-center">
+		<div class="container my-5 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
 			<h2 class="contactTitle formTitle">Nous Contacter</h2>
 			<form class="contactForm col-12" method="post" th:action=@{/contact}>
 				<div class="form-row">
 					<div class="form-group col-md-6">
 						<label for="contact-firstname">Prénom</label>
-						<input type="text" class="form-control" id="contact-firstname" name="firstName" placeholder="John" required>
+						<input type="text" class="form-control" id="contact-firstname" name="firstname" placeholder="John" maxlength="30" required>
 					</div>
 					<div class="form-group col-md-6">
 						<label for="contact-lastname">Nom</label>
-						<input type="text" class="form-control" id="contact-lastname" name="lastName" placeholder="Doe" required>
+						<input type="text" class="form-control" id="contact-lastname" name="lastname" placeholder="Doe" maxlength="30" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label for="contact-email">Adresse mail</label>
-					<input type="email" class="form-control" id="contact-email" name="email" placeholder="xyz@gmail.com" required>
+					<input type="email" class="form-control" id="contact-email" name="email" placeholder="xyz@gmail.com" maxlength="30" required>
 				</div>
 				<div class="form-group">
-					<label for="contact-message">Message</label>
-					<textarea class="form-control" id="contact-message" name="message" placeholder="Votre message" maxlength="1000" required></textarea>
+					<label for="contact-content">Message</label>
+					<textarea class="form-control" id="contact-content" name="content" placeholder="Votre message" maxlength="1000" required></textarea>
 				</div>
 				<div class="text-center">
 					<button type="submit" class="btn my-1">Envoyer</button>
