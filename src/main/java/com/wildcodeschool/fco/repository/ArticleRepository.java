@@ -6,6 +6,5 @@ import org.springframework.stereotype.Repository;
 import com.wildcodeschool.fco.entity.Article;
 
 @Repository
-public interface ArticleRepo extends JpaRepository<Article, Integer>{
-
+public interface ArticleRepository extends JpaRepository<Article, Integer>{
 }

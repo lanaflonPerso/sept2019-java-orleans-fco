@@ -21,6 +21,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.wildcodeschool.fco.entity.Encounter;
 import com.wildcodeschool.fco.repository.EncounterRepository;
 
+
 @Controller
 public class AdminController {
 
@@ -32,7 +33,7 @@ public class AdminController {
 	public String toAdmin() {
 		return "admin";
 	}
-	
+
 	@GetMapping("/admin/next-match")
 	public String toAdminNextMatch(Model model) {
 		model.addAttribute("encounter", encounterRepository.findTopByOrderByTimeUntilMatchAsc());
@@ -75,4 +76,5 @@ public class AdminController {
 		encounterRepository.save(encounter);
 		return "adminNextMatch";
 	}
+	
 }

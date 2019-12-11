@@ -1,13 +1,12 @@
 package com.wildcodeschool.fco.entity;
 
-import javax.persistence.CascadeType;
+import java.util.Date;
+
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 
 
 @Entity
@@ -16,32 +15,15 @@ public class Article {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
-    @ManyToOne(fetch=FetchType.LAZY, cascade=CascadeType.REFRESH)
-    @JoinColumn(name = "user_id")
-    private User author;
+    private String author;
 	private String title;
 	private String content;
-	private Long date;
+	private Date date;
 	private String picture;
-	
-	//Constructor 
-	
-	public Article() {}
-	
-	
-	public Article(Integer id, User author, String title, String content, Long date, String picture) {
-		super();
-		this.id = id;
-		this.author = author;
-		this.title = title;
-		this.content = content;
-		this.date = date;
-		this.picture = picture;
-	}
 
 	
-	//Getters & Setters
+	public Article() {}
+
 
 	public Integer getId() {
 		return id;
@@ -53,12 +35,12 @@ public class Article {
 	}
 
 
-	public User getAuthor() {
+	public String getAuthor() {
 		return author;
 	}
 
 
-	public void setAuthor(User author) {
+	public void setAuthor(String author) {
 		this.author = author;
 	}
 
@@ -83,12 +65,12 @@ public class Article {
 	}
 
 
-	public Long getDate() {
+	public Date getDate() {
 		return date;
 	}
 
 
-	public void setDate(Long date) {
+	public void setDate(Date date) {
 		this.date = date;
 	}
 
