@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head>
+	<head th:replace="fragment/layout.html :: head">
+	</head>
+	<link rel="stylesheet" href="/css/contact.css">
+</head>
+
+<body>
+	<header th:replace="fragment/layout.html :: top"></header>
+
+	<section class="secContact py-5">
+		<div class="container divContact">
+			<div class="row">
+				<div class="col-lg-4 col-md-12" data-aos="fade-right" data-aos-duration="1000">
+					<div class="card">
+						<h2 class="contactTitle">Informations</h2>
+						<p>MAIRIE 71 rue Charles Beauhair, 45140, ST JEAN DE LA RUELLE.</p>
+						<div class="socialLinks">
+							<a href="https://www.facebook.com/ForceCourageObstination/"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-youtube"></i></a>
+							<a href="#"><i class="fas fa-envelope"></i></a>
+						</div>
+						<p class="discover">Si vous souhaitez venir découvrir l’activité, contactez nous par :</p>
+						<p>Téléphone : 09 86 16 00 34</p>
+						<p>Mail : 500281@lcfoot.fr</p>
+					</div>
+				</div>
+				<div class="col-8 plan" data-aos="fade-left" data-aos-duration="1000">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2674.223328636091!2d1.8719849515370968!3d47.91271607910403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e4fab6955aaf69%3A0x2132ef10e5e75f9d!2s71%20Rue%20Charles%20Beauhaire%2C%2045140%20Saint-Jean-de-la-Ruelle!5e0!3m2!1sfr!2sfr!4v1575902259618!5m2!1sfr!2sfr"
+						frameborder="0">
+					</iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="secForm py-5" id="form">
+		<div class="container my-5 d-flex flex-column align-items-center" data-aos="fade-up" data-aos-duration="1000">
+			<h2 class="contactTitle formTitle">Nous Contacter</h2>
+			<form class="contactForm col-12" method="post" th:action=@{/contact#form}>
+				<div class="form-row">
+					<div class="form-group col-md-6">
+						<label for="contact-firstname">Prénom</label>
+						<input type="text" class="form-control" id="contact-firstname" name="firstname" placeholder="John" maxlength="30" required>
+					</div>
+					<div class="form-group col-md-6">
+						<label for="contact-lastname">Nom</label>
+						<input type="text" class="form-control" id="contact-lastname" name="lastname" placeholder="Doe" maxlength="30" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="contact-email">Adresse mail</label>
+					<input type="email" class="form-control" id="contact-email" name="email" placeholder="xyz@gmail.com" maxlength="30" required>
+				</div>
+				<div class="form-group">
+					<label for="contact-content">Message</label>
+					<textarea class="form-control" id="contact-content" name="content" placeholder="Votre message" maxlength="1000" required></textarea>
+				</div>
+				<div class="text-center">
+					<button type="submit" class="btn my-1">Envoyer</button>
+				</div>
+			</form>
+		</div>
+	</section>
+
+<footer th:replace="fragment/layout.html :: bottom"></footer>
+</body>
+
+<div th:replace="fragment/layout.html :: script"></div>
+</html>
