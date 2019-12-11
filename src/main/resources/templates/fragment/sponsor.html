@@ -8,7 +8,7 @@
 
 </head>
 <body >
-  <section  th:fragment="sponsor" >
+  <section th:fragment="sponsorbar" >
 	<div class="firstLevelSponsor" th:if="${sponsorList.size()>1}">
 		<th:block th:each="i: ${#numbers.sequence(0, 1)}">
 			<a th:href="@{${sponsorList[i].getUrlPageSponsor()}}" target="_blank" class= "img-fluid img-responsive">
