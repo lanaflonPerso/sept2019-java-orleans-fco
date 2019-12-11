@@ -1,7 +1,6 @@
 package com.wildcodeschool.fco.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,7 +32,6 @@ public class IndexController {
 		model.addAttribute("sponsorList", sponsorList);
 		model.addAttribute("nextMatch", encounter);
 		model.addAttribute("formatedMatchDate", formatedMatchDate);
-		System.out.println(new Date().getTime());
 		return "index";
 	}
 }
