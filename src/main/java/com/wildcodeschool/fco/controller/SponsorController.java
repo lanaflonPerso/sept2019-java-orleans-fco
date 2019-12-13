@@ -31,7 +31,6 @@ public class SponsorController {
 	public String sponsorPage(Model model) {
 
 		sponsorList = repository.sponsorSortByPriority();
-		System.out.println(sponsorList.size());
 		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
 		model.addAttribute("sponsorList", sponsorList);
 		return "sponsorPage";
@@ -122,7 +121,6 @@ public class SponsorController {
 	public String sponsorPagePublic(Model model) {
 
 		sponsorList = repository.sponsorSortByPriority();
-		System.out.println(sponsorList.size());
 		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
 		model.addAttribute("sponsorList", sponsorList);
 		return "sponsorPagePublic";

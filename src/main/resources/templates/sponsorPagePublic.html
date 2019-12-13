@@ -12,7 +12,7 @@
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
 	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
 	crossorigin="anonymous">
-<link rel="stylesheet" href="css/styleSponsor.css">
+<link rel="stylesheet" href="css/stylePageSponsor.css">
 
 </head>
 <body>
@@ -53,46 +53,28 @@
 		<div class="afterPhoto">
 			<h1>Nos Partenaires</h1>
 		</div>
-		<div class="row">
+		<div class="row"  >
 
-			<div class="col-6 col-md-4 ">
+			<div class="col-6 col-md-4 " th:each="sponsorlist : ${sponsorList}">
 				<div class="element">
-					<img class="img-responsive" src="img/photoPageSponsor/nike.png" alt="">
+				  <a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank" th:title="${sponsorUpdated.getName()}">
+					<img class="img-responsive img-fluid img-thumbnail" th:src="@{${sponsorlist.getUrlPhoto()}}" th:alt="${sponsorUpdated.getName()}" >
+				</a>
 				</div>
 			</div>
-			<div class="col-6 col-md-4 ">
-				<div class="element">
-					<img class="img-responsive" src="img/photoPageSponsor/all.png" alt="">
-				</div>
-			</div>
-
-			<div class="col-6 col-md-4 ">
-				<div class="element">
-					<img class="img-responsive" src="img/photoPageSponsor/orange.png" alt="">
-				</div>
-			</div>
-			<div class="col-6 col-md-4 ">
-				<div class="element">
-					<img class="img-responsive" src="img/photoPageSponsor/renault.png" alt="">
-				</div>
-			</div>
-			<div class="col-6 col-md-4 ">
-				<div class="element">
-					<img class="img-responsive" src="qnb-secondary.png" alt="">
-				</div>
-			</div>
-
-
+			
 
 		</div>
 
 
 
 	</div>
+ 
+ <div class="seperator"></div>
 
 
-
-
+   <section th:replace="fragment/sponsor.html :: sponsorbar"></section>
+	<footer th:replace="fragment/layout.html :: bottom"></footer>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
 		crossorigin="anonymous"></script>

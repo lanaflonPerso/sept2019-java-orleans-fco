@@ -10,11 +10,14 @@
 	margin-top: 90px;
 	width: auto;
 	height: 250px;
-	background: #F6F4EA;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	padding: 10px;
+}
+.seperator{
+	margin-bottom: 10px;
+	margin-top: 10px;
 }
 
 @media screen and (max-width: 992px) {
@@ -42,7 +45,7 @@
 			height: 180px;
 		}
 		.afterPhoto {
-			margin-top: 90px;
+			margin-top: 40px;
 		}
 		.afterPhoto h1 {
 			font-size: 24px;
@@ -51,6 +54,9 @@
 			.element {
 				height: 150px;
 			}
+			.afterPhoto {
+    margin-top: 36px;
+}
 			.belowElement {
 				height: 150px;
 			}
