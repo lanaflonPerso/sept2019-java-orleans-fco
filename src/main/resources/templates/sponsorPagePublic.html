@@ -2,7 +2,7 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="fr">
 <head>
 <head th:replace="fragment/layout.html :: head">
-	</head>
+</head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!--mobile meta -->
@@ -16,7 +16,7 @@
 
 </head>
 <body>
-    <header th:replace="fragment/layout.html :: top"></header>
+	<header th:replace="fragment/layout.html :: top"></header>
 
 	<div id="carouselExampleIndicators"
 		class="carousel slide d-none d-md-block" data-ride="carousel">
@@ -28,13 +28,16 @@
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="img/photoPageSponsor/photo1.jpg" alt="First slide">
+				<img class="d-block w-100" src="img/photoPageSponsor/photo1.jpg"
+					alt="First slide">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block w-100" src="img/photoPageSponsor/photo2.jpg" alt="Second slide">
+				<img class="d-block w-100" src="img/photoPageSponsor/photo2.jpg"
+					alt="Second slide">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block w-100" src="img/photoPageSponsor/photo3.jpg" alt="Third slide">
+				<img class="d-block w-100" src="img/photoPageSponsor/photo3.jpg"
+					alt="Third slide">
 			</div>
 		</div>
 		<a class="carousel-control-prev" href="#carouselExampleIndicators"
@@ -53,27 +56,30 @@
 		<div class="afterPhoto">
 			<h1>Nos Partenaires</h1>
 		</div>
-		<div class="row"  >
+		<div class="row">
 
 			<div class="col-6 col-md-4 " th:each="sponsorlist : ${sponsorList}">
 				<div class="element">
-				  <a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank" th:title="@{${sponsorlist.getName()}}">
-					<img class="img-responsive img-fluid" th:src="@{${sponsorlist.getUrlPhoto()}}" th:alt="${sponsorUpdated.getName()}" >
-				</a>
+					<a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank"
+						th:title="@{${sponsorlist.getName()}}"> <img
+						class="img-responsive img-fluid"
+						th:src="@{${sponsorlist.getUrlPhoto()}}"
+						th:alt="${sponsorUpdated.getName()}">
+					</a>
 				</div>
 			</div>
-			
+
 
 		</div>
 
 
 
 	</div>
- 
- <div class="seperator"></div>
+
+	<div class="seperator"></div>
 
 
-   <section th:replace="fragment/sponsor.html :: sponsorbar"></section>
+	<section th:replace="fragment/sponsor.html :: sponsorbar"></section>
 	<footer th:replace="fragment/layout.html :: bottom"></footer>
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
 		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
