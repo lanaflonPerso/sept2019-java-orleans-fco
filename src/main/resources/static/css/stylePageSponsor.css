@@ -1,4 +1,8 @@
 /*start sponsor*/
+.bodySponsorPage{
+	background: white;
+}
+
 .afterPhoto {
 	margin-top: 40px;
 	display: flex;

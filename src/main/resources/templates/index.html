@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="fr">
 <head>
-<head th:replace="fragment/layout.html :: head">
-</head>
-<link rel="stylesheet" href="/css/home.css">
+	<head th:replace="fragment/layout.html :: head">
+	</head>
+	<link rel="stylesheet" href="/css/home.css">
 
-<link rel="stylesheet" href="/css/styleSponsor.css">
+	<link rel="stylesheet" href="/css/styleSponsor.css">
 
-<link rel="stylesheet" href="/css/articleMain.css">
+	<link rel="stylesheet" href="/css/articleMain.css">
 
 </head>
 
@@ -15,145 +15,120 @@
 	<header th:replace="fragment/layout.html :: top"></header>
 
 	<section class="secFirst d-flex">
-		<a class="mainArticle visualArticle col-xl-9 col-12 no-gutters"
-			href="#">
+		<a class="mainArticle visualArticle col-xl-9 col-12 no-gutters" href="#">
 			<div class="thumbnail text-center">
-				<img class="img-card img-responsive img-fluid"
-					src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_1887.jpg"
-					alt="...">
+				<img class="img-card img-responsive img-fluid" src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_1887.jpg" alt="...">
 				<!-- th:src="${article.img}" -->
 				<div class="caption">
 					<div class="titleMainArticle row no-gutters col-12">
-						<p class="col-12 category">
-							Toutes Catégories <span class="update">JJ/MM/AAAA</span>
-						</p>
+						<p class="col-12 category">Toutes Catégories <span class="update">JJ/MM/AAAA</span></p>
 						<!-- th:text="|${article.category}  \| |-->
 						<!-- th:text="|Date de Parution : ${article.publicateDate}|" -->
-						<h2 class="cardTitle  col-12 ">Lorem ipsum dolor sit amet
-							consectetur adipisicing elit.</h2>
+						<h2 class="cardTitle  col-12 ">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h2>
 						<!--th:text="|${article.author} |     " -->
 					</div>
-
+	
 				</div>
 			</div>
 		</a>
-
+		
 		<div class="container px-0 col-3 next-match">
 			<div class="match-infos d-flex flex-column justify-content-center">
-				<span class="match-equipe" th:text="${nextMatch.localTeam}">Equipe
-					Lorem Ipsum</span> <span class="match-division"
-					th:text="${nextMatch.division}">Régionale 1</span>
-				<div
-					class="match-versus d-flex justify-content-between align-items-center">
+				<span class="match-equipe" th:text="${nextMatch.localTeam}">Equipe Lorem Ipsum</span>
+				<span class="match-division" th:text="${nextMatch.division}">Régionale 1</span>
+				<div class="match-versus d-flex justify-content-between align-items-center">
 					<div class="match-logos d-flex justify-content-center">
 						<img class="logos" src="/img/fco-logo.png" alt="Logo F.C.O">
 					</div>
 					<span class="match-vs d-flex justify-content-center">VS</span>
 					<div class="match-logos d-flex justify-content-center">
-						<img class="logos" th:src="${nextMatch.visiteurLogo}"
-							th:alt="|Logo ${nextMatch.visiteurName}|">
+						<img class="logos" th:src="${nextMatch.visiteurLogo}" th:alt="|Logo ${nextMatch.visiteurName}|">
 					</div>
 				</div>
 				<div class="match-clubs d-flex justify-content-center">
 					<span class="match-club">F.C.O</span>
-					<time class="match-date" th:text="${formatedMatchDate}">00
-						mon.</time>
+					<time class="match-date" th:text="${formatedMatchDate}">00 mon.</time>
 					<span class="match-club" th:text="${nextMatch.visiteurName}">Visiteur</span>
 				</div>
-				<div
-					class="match-countdown mt-5 d-flex justify-content-center align-items-center">
-					<span class="countdown-value" id="days">00</span> <span
-						class="countdown-label">J</span> <span class="countdown-value"
-						id="hours">00</span> <span class="countdown-label">H</span> <span
-						class="countdown-value" id="mins">00</span> <span
-						class="countdown-label">M</span> <span class="countdown-value"
-						id="secs">00</span> <span class="countdown-label">S</span>
+				<div class="match-countdown mt-5 d-flex justify-content-center align-items-center">
+					<span class="countdown-value" id="days">00</span>
+					<span class="countdown-label">J</span>
+					<span class="countdown-value" id="hours">00</span>
+					<span class="countdown-label">H</span>
+					<span class="countdown-value" id="mins">00</span>
+					<span class="countdown-label">M</span>
+					<span class="countdown-value" id="secs">00</span>
+					<span class="countdown-label">S</span>
 				</div>
 			</div>
 			<div class="match-footer py-1">
-				<a class="btn see-matchs d-flex justify-content-center">Voir les
-					autres matchs</a>
+				<a class="btn see-matchs d-flex justify-content-center">Voir les autres matchs</a>
 			</div>
 		</div>
-
+		
 	</section>
 
-
+	
 
 	<section class="content my-5 row col-sm-10 ol-lg-9 col-12 mx-auto">
-		<div
-			class="mx-auto border mainArticle visualArticle col-sm-7 col-lg-6 col-12 no-gutters">
+		<div class="mx-auto border mainArticle visualArticle col-sm-7 col-lg-6 col-12 no-gutters">
 			<div class="thumbnail text-center">
 				<img class=" img-responsive img-fluid"
-					src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_0871.jpg"
-					alt="...">
+					src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_0871.jpg" alt="...">
 				<!-- th:src="${article.img}" -->
 				<div class="caption">
 					<div class="titleMainArticle row no-gutters col-12">
-						<h2 class="cardTitle col-lg-8 col-12 ">Passer a la vitesse
-							supérieur !</h2>
+						<h2 class="cardTitle col-lg-8 col-12 "> Passer a la vitesse supérieur !</h2>
 						<!--th:text="|${article.author} |     " -->
-						<p class="col-12 category">
-							U17 <span class="update">JJ/MM/AAAA</span>
-						</p>
+						<p class="col-12 category">U17 <span class="update">JJ/MM/AAAA</span></p>
 						<!-- th:text="|${article.category}  \| |-->
 						<!-- th:text="|Date de Parution : ${article.publicateDate}|" -->
 					</div>
 				</div>
 			</div>
 		</div>
-
-		<div
-			class="thirdCard border mx-auto visualArticle col-sm-4 col-12 col-lg-3">
+	
+		<div class="thirdCard border mx-auto visualArticle col-sm-4 col-12 col-lg-3">
 			<!-- th:each="article : ${Articles}" -->
 			<div class="thumbnail text-center">
 				<img class="img-fluid img-responsive"
-					src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_1102.jpg"
-					alt="...">
+					src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_1102.jpg" alt="...">
 				<!-- th:src="${article.img}" -->
 			</div>
 			<div class="col-lg-11">
 				<div class="bodyCard">
-					<h3 class="cardTitle">Lorem ipsum donda modi a sol odit.</h3>
-					<!-- th:text="${article.title}" -->
+					<h3 class="cardTitle">Lorem ipsum donda modi a sol odit.</h3> <!-- th:text="${article.title}" -->
 					<div class=" contentCard row no-gutters">
-						<p class="col-12 category">
-							Sénior <span class="update">JJ/MM/AAAA</span>
-						</p>
+						<p class="col-12 category"> Sénior <span class="update">JJ/MM/AAAA</span></p>
 						<!-- th:text="|${article.category}  \| |-->
 						<!-- th:text="|Date de Parution : ${article.publicateDate}|" -->
 					</div>
 				</div>
 			</div>
 		</div>
-		<div
-			class="thirdCard border mx-auto visualArticle col-sm-4 col-12 col-lg-3">
+		<div class="thirdCard border mx-auto visualArticle col-sm-4 col-12 col-lg-3">
 			<!-- th:each="article : ${Articles}" -->
 			<div class="thumbnail text-center">
 				<img class="img-fluid img-responsive"
-					src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_8947.jpg"
-					alt="...">
+					src="http://www.fco-stjeandelaruelle.net/wp-content/uploads/2018/08/IMG_8947.jpg" alt="...">
 				<!-- th:src="${article.img}" -->
 			</div>
 			<div class="col-lg-11">
 				<div class="bodyCard">
-					<h3 class="cardTitle">Lorem ipsum dodeserunt, voluptates
-						mollitia animi velolore hic ipsa iste dicta?</h3>
-					<!-- th:text="${article.title}" -->
+					<h3 class="cardTitle"> Lorem ipsum dodeserunt, voluptates mollitia animi velolore hic ipsa iste dicta?
+					</h3> <!-- th:text="${article.title}" -->
 					<div class=" contentCard row no-gutters">
-						<p class="col-12 category">
-							U15 <span class="update">JJ/MM/AAAA</span>
-						</p>
+						<p class="col-12 category">U15 <span class="update">JJ/MM/AAAA</span></p>
 						<!-- th:text="|${article.category}  \| |-->
 						<!-- th:text="|Date de Parution : ${article.publicateDate}|" -->
 					</div>
 				</div>
 			</div>
 		</div>
-
+		
 	</section>
-
-	<section th:replace="fragment/sponsor.html :: sponsorbar"></section>
+	
+    <section th:replace="fragment/sponsor.html :: sponsorbar"></section>
 	<footer th:replace="fragment/layout.html :: bottom"></footer>
 </body>
 
