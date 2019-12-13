@@ -118,5 +118,16 @@ public class SponsorController {
 
 		return "sponsorPage";
 	}
+	@GetMapping("/sponsorPagePublic")
+	public String sponsorPagePublic(Model model) {
+
+		sponsorList = repository.sponsorSortByPriority();
+		System.out.println(sponsorList.size());
+		model.addAttribute("sponsorUpdated", new Sponsor(" ", " ", " ", 0));
+		model.addAttribute("sponsorList", sponsorList);
+		return "sponsorPagePublic";
+
+	}
+	
 
 }
