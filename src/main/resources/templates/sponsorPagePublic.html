@@ -57,8 +57,8 @@
 
 			<div class="col-6 col-md-4 " th:each="sponsorlist : ${sponsorList}">
 				<div class="element">
-				  <a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank" th:title="${sponsorUpdated.getName()}">
-					<img class="img-responsive img-fluid img-thumbnail" th:src="@{${sponsorlist.getUrlPhoto()}}" th:alt="${sponsorUpdated.getName()}" >
+				  <a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank" th:title="@{${sponsorlist.getName()}}">
+					<img class="img-responsive img-fluid" th:src="@{${sponsorlist.getUrlPhoto()}}" th:alt="${sponsorUpdated.getName()}" >
 				</a>
 				</div>
 			</div>
