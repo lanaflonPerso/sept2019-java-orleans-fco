@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import com.wildcodeschool.fco.entity.Encounter;
 import com.wildcodeschool.fco.entity.Sponsor;
+import com.wildcodeschool.fco.repository.ArticleRepository;
 import com.wildcodeschool.fco.repository.EncounterRepository;
 import com.wildcodeschool.fco.repository.SponsorRepository;
 
@@ -18,6 +19,9 @@ import com.wildcodeschool.fco.repository.SponsorRepository;
 public class IndexController {
 	@Autowired
 	private SponsorRepository repository;
+	
+	@Autowired
+	private ArticleRepository articleRepositoy;
 
 	List<Sponsor> sponsorList;
 

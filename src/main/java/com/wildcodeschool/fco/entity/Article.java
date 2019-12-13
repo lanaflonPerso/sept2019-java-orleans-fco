@@ -15,6 +15,7 @@ public class Article {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
+	private String division;
     private String author;
 	private String title;
 	private String content;
@@ -23,6 +24,18 @@ public class Article {
 
 	
 	public Article() {}
+	
+	public Article(Integer id, String division,  String author, String title, String content, Date date, String picture) {
+		this.id = id;
+		this.division=division;
+		this.author = author;
+		this.title = title;
+		this.content = content;
+		this.date = date;
+		this.picture = picture;
+	}
+
+
 
 
 	public Integer getId() {
@@ -34,6 +47,14 @@ public class Article {
 		this.id = id;
 	}
 
+
+	public String getDivision() {
+		return division;
+	}
+
+	public void setDivision(String division) {
+		this.division = division;
+	}
 
 	public String getAuthor() {
 		return author;

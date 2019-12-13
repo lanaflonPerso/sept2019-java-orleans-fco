@@ -17,8 +17,11 @@
 		</div>
 
 		<div class="divTitle container col-10 d-flex py-2 border-bottom">
-			<div class="sendInfos col-2">
+			<div class="sendInfos col-1">
 				<p>Id</p>
+			</div>
+			<div class="sendInfos col-2">
+				<p>division</p>
 			</div>
 			<div class="sendMessage col-2">
 				<p>Auteur</p>
@@ -29,14 +32,17 @@
 			<div class="sendDate col-2">
 				<p>Date</p>
 			</div>
-			<div class="sendDate col-3">
+			<div class="sendDate col-2">
 				<p>Image</p>
 			</div>
 			
 		</div>
 		<div class="container col-10 d-flex py-2 border-bottom" th:each="article : ${articles}">
-			<div class="col-2">
+			<div class="col-1">
 				<span th:text="${article.id}">id</span>
+			</div>
+			<div class="col-2">
+				<span th:text="${article.division}">Division</span>
 			</div>
 			<div class="col-2">
 				<p th:text="${article.author}">Auteur</p>
@@ -45,10 +51,10 @@
 				<p th:text="${article.title}">Titre</p>
 			</div>
 			<div class="col-2">
-				<p th:text="${#dates.format(article.date,'yyyy-MM-dd')}">Date</p>
+				<p th:text="${#dates.format(article.date,'dd MMM yyyy')}">Date</p>
 			</div>
-			<div class="col-3">
-				<p th:text="${article.picture}">Image</p>
+			<div class="col-2">
+				<img class="img-fluid img-responsive" th:src="${article.picture}">
 			</div>
 			<div class="d-flex flex-column">
 				<a th:href="@{/admin/article(id=${article.id})}"><i class="fas fa-pen"></i></a>
