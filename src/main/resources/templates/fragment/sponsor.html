@@ -11,22 +11,18 @@
 	<section th:fragment="sponsorbar">
 		<div class="firstLevelSponsor" th:if="${sponsorList.size()>1}">
 			<th:block th:each="i: ${#numbers.sequence(0, 1)}">
-				<a th:href="@{${sponsorList[i].getUrlPageSponsor()}}"
-					target="_blank" class="img-fluid img-responsive"> <img
-					class="sponsorElement firstLevel"
-					th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
+				<a href="/sponsor">
+					<img class="sponsorElement firstLevel" th:src="@{${sponsorList[i].getUrlPhoto()}}">
+				</a>
 			</th:block>
-
 		</div>
 
 		<div class="secondLevelSponsor" th:if="${sponsorList.size()>2}">
 			<th:block th:each="i: ${#numbers.sequence(2, sponsorList.size()-1)}">
-
-				<a th:if="${i<9}" th:href="@{${sponsorList[i].getUrlPageSponsor()}}"
-					target="_blank"><img class="sponsorElement secondLevel"
-					th:src="@{${sponsorList[i].getUrlPhoto()}}"></a>
+				<a href="/sponsor">
+					<img class="sponsorElement secondLevel" th:src="@{${sponsorList[i].getUrlPhoto()}}">
+				</a>
 			</th:block>
-
 		</div>
 	</section>
 
