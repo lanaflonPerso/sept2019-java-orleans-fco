@@ -1,70 +1,37 @@
-/*start sponsor*/
-.bodySponsorPage{
-	background: white;
-}
-
 .afterPhoto {
-	margin-top: 40px;
 	display: flex;
 	justify-content: center;
-	border-bottom: 2px solid #D74850;
+	border-bottom: 2px solid #DC143C;
 }
 
 .element {
 	margin-top: 90px;
 	width: auto;
 	height: 250px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 	padding: 10px;
 }
 
-.seperator {
-	margin-bottom: 10px;
-	margin-top: 10px;
-}
-
-@media screen and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
+	
 	.element {
 		margin-top: 60px;
-		width: auto;
-		height: 250px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		padding: 10px;
 	}
-	.afterPhoto {
-		margin-top: 54px;
-		display: flex;
-		justify-content: center;
-		border-bottom: 2px solid red;
-	}
+	
 	.afterPhoto h1 {
 		font-size: 29px;
 	}
-	@media screen and (max-width: 644px) {
-		.element {
-			margin-top: 25px;
-			height: 180px;
-		}
-		.afterPhoto {
-			margin-top: 40px;
-		}
-		.afterPhoto h1 {
-			font-size: 24px;
-		}
-		@media screen and (max-width: 376px) {
-			.element {
-				height: 150px;
-			}
-			.afterPhoto {
-				margin-top: 36px;
-			}
-			.belowElement {
-				height: 150px;
-			}
-		}
+}
+	
+@media only screen and (max-width: 644px) {
+
+	.element {
+		margin-top: 25px;
+		height: 180px;
+	}
+
+@media only screen and (max-width: 376px) {
+	
+	.element {
+		height: 150px;
 	}
 }
