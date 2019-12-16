@@ -6,3 +6,11 @@ INSERT INTO encounter VALUES (1, "Régionale 1", "Equipe Futsal", 1577228400000,
 INSERT INTO message VALUES
 (1, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex urna, scelerisque quis varius a, fermentum at mi. Phasellus ac enim eget arcu pharetra pharetra.", "2019-12-08 16:25:32", "blabla@gmail.com", "Quentin", "Liger"),
 (2,"Morbi enim enim, sagittis eget sapien et, aliquam ultrices justo. Mauris interdum enim urna, nec rutrum risus venenatis nec. Aenean vitae ante id est rhoncus vestibulum. In quis rhoncus orci. Quisque viverra sed nisi ac blandit. Vestibulum egestas libero augue, in elementum elit sodales non. Proin ut erat a augue rutrum scelerisque.", "2019-12-09 09:56:12", "emailunpeutroplong@gmail.com", "Jean-Michel-Pierre", "Dupont");
+
+INSERT INTO pole VALUES (1, "Séniors"), (2, "Formation"), (3, "Pré-formation"), (4, "École de foot");
+
+INSERT INTO team (id, name, pole_id) VALUES
+(14, "Seniors 1", 1), (15, "Seniors 2", 1), (16, "Futsal", 1), (17, "Féminines", 1),
+(1, "U19", 2), (2, "U17", 2), (3, "U16", 2), (4, "U15", 2), (5, "U14", 2),
+(6, "U13", 3), (7, "U12", 3), (8, "U11", 3), (9, "U10", 3),
+(10, "U9", 4), (11, "U8", 4), (12, "U7", 4), (13, "U6", 4);
