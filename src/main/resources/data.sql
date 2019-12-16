@@ -7,7 +7,7 @@ INSERT INTO message VALUES
 (1, "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ex urna, scelerisque quis varius a, fermentum at mi. Phasellus ac enim eget arcu pharetra pharetra.", "2019-12-08 16:25:32", "blabla@gmail.com", "Quentin", "Liger"),
 (2,"Morbi enim enim, sagittis eget sapien et, aliquam ultrices justo. Mauris interdum enim urna, nec rutrum risus venenatis nec. Aenean vitae ante id est rhoncus vestibulum. In quis rhoncus orci. Quisque viverra sed nisi ac blandit. Vestibulum egestas libero augue, in elementum elit sodales non. Proin ut erat a augue rutrum scelerisque.", "2019-12-09 09:56:12", "emailunpeutroplong@gmail.com", "Jean-Michel-Pierre", "Dupont");
 
-INSERT INTO pole VALUES (1, "Séniors"), (2, "Formation"), (3, "Pré-formation"), (4, "École de foot");
+INSERT INTO pole VALUES (1, "seniors"), (2, "formation"), (3, "pre-formation"), (4, "ecole-de-foot");
 
 INSERT INTO team (id, name, pole_id) VALUES
 (14, "Seniors 1", 1), (15, "Seniors 2", 1), (16, "Futsal", 1), (17, "Féminines", 1),

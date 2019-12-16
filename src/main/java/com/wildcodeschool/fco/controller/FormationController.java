@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
+import com.wildcodeschool.fco.repository.PoleRepository;
 import com.wildcodeschool.fco.repository.SponsorRepository;
 import com.wildcodeschool.fco.repository.TeamRepository;
 
@@ -17,12 +19,15 @@ public class FormationController {
 	@Autowired
 	private TeamRepository teamRepository;
 	
-	@GetMapping("/formation")
-	public String toSeniors(Model model) {
+	@Autowired
+	private PoleRepository poleRepository;
+	
+	@GetMapping("/pole/{poleName}")
+	public String toPole(@PathVariable String poleName, Model model) {
 		model.addAttribute("sponsorList", sponsorRepository.sponsorSortByPriority());
-		model.addAttribute("teams", teamRepository.findByPoleId(2));
-		model.addAttribute("classActive","active");
-		return "formation";
+		model.addAttribute("teams", teamRepository.findByPoleName(poleName));
+		model.addAttribute("pole", poleRepository.findByName(poleName));
+		return "pole";
 	}
 
 }

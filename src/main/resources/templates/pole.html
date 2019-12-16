@@ -3,7 +3,7 @@
 
 <head>
 	<head th:replace="fragment/layout.html :: head"></head>
-	<link rel="stylesheet" href="/css/formation.css">
+	<link rel="stylesheet" href="/css/pole.css">
 </head>
 
 <body>
@@ -11,7 +11,7 @@
 
 	<section class="tab-nav">
 		<div class="container md-col-10 sm-col-12 md-offset-1 sm-offest-0">
-			<p class="pole-name d-none d-md-block">Pôle Formation</p>
+			<p class="pole-name d-none d-md-block" th:text="|Pôle ${pole.name}|">Pôle Formation</p>
 			<nav class="nav d-flex justify-content-center">
 				<a data-toggle="tab" th:each="team, iter : ${teams}" th:class="${iter.index == 0} ? 'nav-item nav-link active' : 'nav-item nav-link'" th:href="|#p${iter.index}|" th:text="${team.name}">Team</a>
 			</nav>

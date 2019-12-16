@@ -10,5 +10,5 @@ import com.wildcodeschool.fco.entity.Team;
 @Repository
 public interface TeamRepository extends JpaRepository<Team, Integer> {
 
-	List<Team> findByPoleId(Integer id);
+	List<Team> findByPoleName(String name);
 }
