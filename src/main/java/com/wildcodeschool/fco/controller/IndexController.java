@@ -21,7 +21,7 @@ public class IndexController {
 	private SponsorRepository repository;
 	
 	@Autowired
-	private ArticleRepository articleRepositoy;
+	private ArticleRepository articleRepository;
 
 	List<Sponsor> sponsorList;
 

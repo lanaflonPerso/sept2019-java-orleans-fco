@@ -3,4 +3,4 @@ INSERT INTO sponsor VALUES (60,'nike',1,'https://www.nike.com/fr/','/img/photoSp
 
 INSERT INTO encounter VALUES (1, "Régionale 1", "Equipe Futsal", 1577228400000, "/img/chateauroux.jpg", "Chateauroux Etoile");
 
-INSERT INTO article VALUES (1,"DonPedroDelChibro","j'aime l'aquaponeyyyyy", "2019-01-25","Sénior" ,"Ici lien de me image cassé...", "LE FOT c vrmt trot  dla bal"),(2,"Jésus", "Et dieu créa l'orthografe", "0666-01-01", "U666", "/img/JesusSavesSoccerSquare.jpg","Le FUT ces vraimens treaux bi1");
+INSERT INTO article VALUES (1,"DonPedroDelChibro","j'aime l'aquaponeyyyyy", "2019-01-25","Sénior" ,"Ici lien de me image cassé...", "LE FOT c vrmt trot  dla bal"),(2,"Jésus", "Et dieu créa l'orthografe", "0666-01-01", "U666", "/img/photoArticles/JesusSavesSoccerSquare.jpg","Le FUT ces vraimens treaux bi1");

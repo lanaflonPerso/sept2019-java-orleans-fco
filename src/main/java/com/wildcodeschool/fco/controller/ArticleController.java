@@ -61,7 +61,7 @@ public class ArticleController {
 			e1.printStackTrace();
 		}
 		
-	 	Article article =new Article(id, division, author, title, content, null , "/img/" + picture.getOriginalFilename());
+	 	Article article =new Article(id, division, author, title, content, null , "/img/photoArticles/" + picture.getOriginalFilename());
 		article.setDate(new Date());
     	articleRepository.save(article);
 		model.addAttribute("article",article);
