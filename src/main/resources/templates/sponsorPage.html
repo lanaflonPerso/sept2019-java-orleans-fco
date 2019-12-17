@@ -14,12 +14,14 @@
 		<div class="firstPart">
 			<div th:each="sponsorlist : ${sponsorList}" class="blockSponsor">
 				<a th:href="@{${sponsorlist.getUrlPageSponsor()}}" target="_blank">
-				<img class="sponsorElement masterPage" th:src="@{${sponsorlist.getUrlPhoto()}}">
+					<img class="sponsorElement masterPage"
+					th:src="@{${sponsorlist.getUrlPhoto()}}">
 				</a>
 				<div class="modifySponsor">
 					<div th:text="${sponsorlist.getPriority()}"
 						class="priorityBlockSponsor">10</div>
-					<form method="post" th:action="@{/admin/retrieveSponsor#updateSponsor}">
+					<form method="post"
+						th:action="@{/admin/retrieveSponsor#updateSponsor}">
 						<input type="hidden" name="sponsorId"
 							th:value="${sponsorlist.getId()}">
 						<button type="submit">
