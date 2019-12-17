@@ -2,6 +2,10 @@
 	background-color: #E4DDD3;
 }
 
+.secForm {
+	background-color: #1c1c1c;
+}
+
 .card {
 	box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
 	overflow: hidden;
@@ -22,8 +26,8 @@
 	height: 6px;
 	background-color: #DC143C;
 	display: block;
-	margin: auto;
-	margin-top: 0.9rem;
+	margin: 0.9rem auto;
+	border-radius: 20px;
 }
 
 .socialLinks {
@@ -66,12 +70,4 @@ textarea {
 
 .btn:hover {
 	background-color: #DC1432;
-}
-
-@media only screen and (max-width: 991px) {
-
-	.plan {
-		display: none;
-	}
-
 }
