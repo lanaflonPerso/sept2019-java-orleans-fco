@@ -1,0 +1,45 @@
+body {
+	background-color: #fff;
+}
+
+/* Tab */
+
+.tab-content {
+	background-color: #1c1c1c;
+	color: #fff;
+}
+
+.tab-nav .nav-item {
+	padding: 37px 20px 35px;
+	margin-left: 0;
+	font-weight: bold;
+}
+
+.tab-nav .nav-item.active {
+	color: #DC143C !important;
+}
+
+.tab-nav .nav-link.active:before {
+	opacity: 1;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+.tab-nav .nav-item:hover {
+	color: #DC143C !important;
+	transition: 0.2s;
+}
+
+.tab-nav .nav-link:before {
+	transition: 0s;
+}
+
+.pole-name {
+	position: absolute;
+	padding: 37px 20px 35px;
+	text-transform: uppercase;
+	color: #b7b7b7;
+}
+
+/* Tab Content */
+

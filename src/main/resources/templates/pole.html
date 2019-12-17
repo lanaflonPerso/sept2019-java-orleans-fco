@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="fr">
+
+<head>
+	<head th:replace="fragment/layout.html :: head"></head>
+	<link rel="stylesheet" href="/css/pole.css">
+</head>
+
+<body>
+	<header th:replace="fragment/layout.html :: top"></header>
+
+	<section class="tab-nav">
+		<div class="container md-col-10 sm-col-12 md-offset-1 sm-offest-0">
+			<p class="pole-name d-none d-md-block" th:text="|Pôle ${pole.name}|">Pôle Formation</p>
+			<nav class="nav d-flex justify-content-center">
+				<a data-toggle="tab" th:each="team, iter : ${teams}" th:class="${iter.index == 0} ? 'nav-item nav-link active' : 'nav-item nav-link'" th:href="|#p${iter.index}|" th:text="${team.name}">Team</a>
+			</nav>
+		</div>
+	</section>
+
+	<section class="tab-content">
+		<div th:each="team, iter : ${teams}" th:class="${iter.index == 0} ? 'tab-pane active' : 'tab-pane'" th:id="|p${iter.index}|">
+			<img class="img-fluid team-img" src="https://via.placeholder.com/1900x700">
+		</div>
+	</section>
+	
+	<section th:replace="fragment/sponsor.html :: sponsorbar"></section>
+	<footer th:replace="fragment/layout.html :: bottom"></footer>
+</body>
+
+<div th:replace="fragment/layout.html :: script"></div>
+</html>
