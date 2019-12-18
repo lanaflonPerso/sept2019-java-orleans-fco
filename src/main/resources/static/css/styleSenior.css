@@ -1,0 +1,96 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.body {
+	background-image: url(/img/photoJoueur/backgroundSenior.jpg);
+	background-size: cover;
+}
+
+.element {
+	position: relative;
+}
+
+h3 {
+	margin-top: 8px;
+	padding-top: 25px;
+	color: black;
+}
+
+.bondPhoto {
+	display: flex;
+}
+
+.PlayerInformation {
+	position: absolute;
+	clip-path: polygon(// line 191 0 0, 100% 0, 100% - $ sidebar-angle 100%, 0 100%);
+	width: 80%;
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 23% 100%);
+	background: rgba(27, 27, 27, 0.8);
+	bottom: 0;
+	right: 0;
+	height: 18%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.h2{
+	font-weight: bolder;
+}
+.PlayerNumber {
+	display: flex;
+	align-items: center;
+	position: absolute;
+	width: 40%;
+	clip-path: polygon(0 0, 63% 0, 100% 100%, 0% 100%);
+	background: rgba(215, 72, 80, 0.8);
+	border-bottom: 0;
+	bottom: 0;
+	left: 0;
+	height: 18%;
+	color: white;
+	padding-left: 10px;
+	
+
+}
+
+.PlayerInformation p {
+	color: white;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.PlayerNumber h2 {
+	font-size: 2.25rem;
+}
+
+@media screen and (max-width: 991px) {
+	.PlayerInformation p {
+		font-size: 0.8rem;
+	}
+	.PlayerNumber p, h1, h3, .h2 {
+		font-size: 1.25rem;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.PlayerInformation p {
+		font-size: 1rem;
+	}
+	.PlayerNumber p, h1, h3, .h2 {
+		font-size: 2rem;
+	}
+}
+
+@media screen and (max-width: 428px) {
+	.PlayerInformation p {
+		font-size: 0.7rem;
+	}
+	.PlayerNumber p, h1, h3, .h2 {
+		font-size: 1.25rem;
+	}
+}

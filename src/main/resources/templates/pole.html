@@ -4,6 +4,7 @@
 <head>
 	<head th:replace="fragment/layout.html :: head"></head>
 	<link rel="stylesheet" href="/css/pole.css">
+	<link rel="stylesheet" href="/css/styleSenior.css">
 </head>
 
 <body>
@@ -18,9 +19,147 @@
 		</div>
 	</section>
 
-	<section class="tab-content">
+	<section class="tab-content body">
 		<div th:each="team, iter : ${teams}" th:class="${iter.index == 0} ? 'tab-pane active' : 'tab-pane'" th:id="|p${iter.index}|">
-			<img class="img-fluid team-img" src="https://via.placeholder.com/1900x700">
+			<div class="background1"></div>
+<div class="background2"></div>
+
+ <div class="container ">
+		<div >
+			<h3>Staff</h3>
+		</div>
+		<div class="row">
+
+			<div class="col-6 col-md-3 ">
+				<div class="element">	
+				<img class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto row">
+						<div class="PlayerNumber">
+						<p class="h2">15</p>
+						</div>
+						<div class="PlayerInformation ">
+						<p >patrick</p>
+						<p >attaquant</p>
+						</div>
+						</div>
+				</div>
+			</div>
+				<div class="col-6 col-md-3 ">
+				<div class="element">
+				<img
+						class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+				</div>
+			</div>
+					<div class="col-6 col-md-3 ">
+				<div class="element">
+				<img
+						class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+				</div>
+			</div>
+					<div class="col-6 col-md-3 ">
+				<div class="element">
+				<img
+						class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+				</div>
+			</div>
+				
+
+		</div>
+		
+		
+		<div >
+			<h3>Effectif</h3>
+		</div>
+		<div class="row">
+
+			<div class="col-6 col-md-3 ">
+				<div class="element">	
+				<img class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+				</div>
+			</div>
+				<div class="col-6 col-md-3 ">
+				<div class="element">
+				<img
+						class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+						
+				</div>
+			</div>
+					<div class="col-6 col-md-3 ">
+				<div class="element">
+				<img
+						class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+				</div>
+			</div>
+					<div class="col-6 col-md-3 ">
+				<div class="element">
+				<img
+						class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+				</div>
+			</div>
+					<div class="col-6 col-md-3 ">
+				<div class="element">
+				<img
+						class="img-responsive img-fluid"
+						src="/img/photoJoueur/photo.png"
+						alt="${sponsorUpdated.getName()}">
+						<div class="bondPhoto">
+						<div class="PlayerNumber"></div>
+						<div class="PlayerInformation"></div>
+						</div>
+				</div>
+			</div>
+
+
+		</div>
+
+
+
+
+	</div>
 		</div>
 	</section>
 	
