@@ -2,9 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="fr">
 
 <head>
-	<head th:replace="fragment/layout.html :: head"></head>
-	<link rel="stylesheet" href="/css/pole.css">
-	<link rel="stylesheet" href="/css/styleSenior.css">
+<head th:replace="fragment/layout.html :: head"></head>
+<link rel="stylesheet" href="/css/pole.css">
+<link rel="stylesheet" href="/css/styleSenior.css">
 </head>
 
 <body>
@@ -12,157 +12,176 @@
 
 	<section class="tab-nav">
 		<div class="container md-col-10 sm-col-12 md-offset-1 sm-offest-0">
-			<p class="pole-name d-none d-md-block" th:text="|Pôle ${pole.name}|">Pôle Formation</p>
+			<p class="pole-name d-none d-md-block" th:text="|Pôle ${pole.name}|">Pôle
+				Formation</p>
 			<nav class="nav d-flex justify-content-center">
-				<a data-toggle="tab" th:each="team, iter : ${teams}" th:class="${iter.index == 0} ? 'nav-item nav-link active' : 'nav-item nav-link'" th:href="|#p${iter.index}|" th:text="${team.name}">Team</a>
+				<a data-toggle="tab" th:each="team, iter : ${teams}"
+					th:class="${iter.index == 0} ? 'nav-item nav-link active' : 'nav-item nav-link'"
+					th:href="|#p${iter.index}|" th:text="${team.name}">Team</a>
 			</nav>
 		</div>
 	</section>
 
 	<section class="tab-content body">
-		<div th:each="team, iter : ${teams}" th:class="${iter.index == 0} ? 'tab-pane active' : 'tab-pane'" th:id="|p${iter.index}|">
+		<div th:each="team, iter : ${teams}"
+			th:class="${iter.index == 0} ? 'tab-pane active' : 'tab-pane'"
+			th:id="|p${iter.index}|">
 			<div class="background1"></div>
-<div class="background2"></div>
+			<div class="background2"></div>
 
- <div class="container ">
-		<div >
-			<h3>Staff</h3>
-		</div>
-		<div class="row">
+			<div class="container ">
+				<div>
+					<h3>Staff</h3>
+				</div>
+				<div class="row">
 
-			<div class="col-6 col-md-3 ">
-				<div class="element">	
-				<img class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto row">
-						<div class="PlayerNumber">
-						<p class="h2">15</p>
-						</div>
-						<div class="PlayerInformation ">
-						<p >patrick</p>
-						<p >attaquant</p>
-						</div>
-						</div>
-				</div>
-			</div>
-				<div class="col-6 col-md-3 ">
-				<div class="element">
-				<img
-						class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
-						</div>
-				</div>
-			</div>
 					<div class="col-6 col-md-3 ">
-				<div class="element">
-				<img
-						class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto row">
+								<div class="PlayerNumber">
+									<p class="h2">15</p>
+								</div>
+								<div class="PlayerInformation ">
+									<p>patrick</p>
+									<p>attaquant</p>
+								</div>
+							</div>
 						</div>
-				</div>
-			</div>
+					</div>
 					<div class="col-6 col-md-3 ">
-				<div class="element">
-				<img
-						class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
 						</div>
-				</div>
-			</div>
-				
-
-		</div>
-		
-		
-		<div >
-			<h3>Effectif</h3>
-		</div>
-		<div class="row">
-
-			<div class="col-6 col-md-3 ">
-				<div class="element">	
-				<img class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
-						</div>
-				</div>
-			</div>
-				<div class="col-6 col-md-3 ">
-				<div class="element">
-				<img
-						class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
-						</div>
-						
-				</div>
-			</div>
+					</div>
 					<div class="col-6 col-md-3 ">
-				<div class="element">
-				<img
-						class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
 						</div>
-				</div>
-			</div>
+					</div>
 					<div class="col-6 col-md-3 ">
-				<div class="element">
-				<img
-						class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
 						</div>
+					</div>
+
+
 				</div>
-			</div>
+
+
+				<div>
+					<h3>Effectif</h3>
+				</div>
+				<div class="row">
+
 					<div class="col-6 col-md-3 ">
-				<div class="element">
-				<img
-						class="img-responsive img-fluid"
-						src="/img/photoJoueur/photo.png"
-						alt="${sponsorUpdated.getName()}">
-						<div class="bondPhoto">
-						<div class="PlayerNumber"></div>
-						<div class="PlayerInformation"></div>
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
 						</div>
+					</div>
+					<div class="col-6 col-md-3 ">
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-6 col-md-3 ">
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 ">
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-md-3 ">
+						<div class="element">
+							<img class="img-responsive img-fluid"
+								src="/img/photoJoueur/photo.png"
+								alt="${sponsorUpdated.getName()}">
+							<div class="bondPhoto">
+								<div class="PlayerNumber"></div>
+								<div class="PlayerInformation"></div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
-
-
-		</div>
-
-
-
-
-	</div>
+			  <div class="container contact">
+      <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-12">
+              <div class="row">
+                  <div class="col-lg-12 col-12 p-0 contact-us">
+                    <h4 class="">CONTACT :</h4><hr>
+                  </div>
+              </div>
+              <div class="row bg-light pt-3 pb-3 mb-4">
+                  <div class="col-lg-12">
+                    <h6>Responsable : <span>patrick</span></h6>
+                  </div>
+                  <div class="col-lg-4 col-4 offset-3">
+                     MAIRIE 71 rue Charles Beauhair, 45140, ST JEAN DE LA RUELLE.                         
+                  </div>
+                  <div class="col-lg-4 col-4">
+                  <p class="m-0 text-danger"><i class="fa fa-phone-square" aria-hidden="true"></i>
+                      +33 1234567890
+                  </p>
+                  <p class="m-0 text-info"><i class="fa fa-envelope" aria-hidden="true"></i>
+                      patrick1234@gmail.com
+                  </p>
+                  </div>
+              </div>      
+              </div>
+          </div>
+      </div>
 		</div>
 	</section>
-	
+
 	<section th:replace="fragment/sponsor.html :: sponsorbar"></section>
 	<footer th:replace="fragment/layout.html :: bottom"></footer>
 </body>

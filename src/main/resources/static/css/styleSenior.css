@@ -8,6 +8,17 @@
 	background-image: url(/img/photoJoueur/backgroundSenior.jpg);
 	background-size: cover;
 }
+.contact{
+	margin-top: 20px;
+	padding: 20px;
+	background: rgba(27,27,27,0.2);
+}
+.bg-light{
+	color:black;
+	background: rgba(246, 244, 234,0.5)!important;
+	box-shadow: 1px -1px 102px 23px rgba(0,0,0,0.75);
+	
+}
 
 .element {
 	position: relative;
@@ -87,6 +98,10 @@ h3 {
 }
 
 @media screen and (max-width: 428px) {
+	.PlayerNumber {
+	padding-top: 10px;
+	
+}
 	.PlayerInformation p {
 		font-size: 0.7rem;
 	}
