@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
+import com.wildcodeschool.fco.entity.Article;
 import com.wildcodeschool.fco.entity.Encounter;
 import com.wildcodeschool.fco.entity.Sponsor;
 import com.wildcodeschool.fco.repository.ArticleRepository;
@@ -22,7 +23,10 @@ public class IndexController {
 	
 	@Autowired
 	private ArticleRepository articleRepository;
-
+	
+	List<Article> primaryArticles;
+	List<Article> secondeArticles;
+	List<Article> thirdArticles;
 	List<Sponsor> sponsorList;
 
 	@Autowired
@@ -30,14 +34,48 @@ public class IndexController {
 	
 	@GetMapping("/")
 	public String toHome(Model model) {
+		
 		Encounter encounter = encounterRepository.findTopByOrderByTimeUntilMatchAsc();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd MMM");
 		String formatedMatchDate = formatter.format(encounter.getTimeUntilMatch());
+		
+		
+		primaryArticles = articleRepository.priorityByDate(1);
+		if (primaryArticles.size() > 3) {
+			primaryArticles = articleRepository.priorityByDate(1).subList(0, 3);
+		}
+		
+		secondeArticles = articleRepository.priorityByDate(2);
+		if (secondeArticles.size() > 3) {
+			secondeArticles = articleRepository.priorityByDate(2).subList(0, 3);
+		}
+		
+		thirdArticles 	= articleRepository.priorityByDate(3);
+		if (thirdArticles.size() > 6) {
+			thirdArticles 	= articleRepository.priorityByDate(3).subList(0, 6);
+		}
+		
+		
+		
 		sponsorList = repository.sponsorSortByPriority();
+		
+		model.addAttribute("primaryArticles", primaryArticles);
+		model.addAttribute("secondeArticles", secondeArticles);
+		model.addAttribute("thirdArticles",thirdArticles);
 		model.addAttribute("sponsorList", sponsorList);
 		model.addAttribute("nextMatch", encounter);
 		model.addAttribute("formatedMatchDate", formatedMatchDate);
+		
 		System.out.println(new Date().getTime());
+		for (Article article : primaryArticles) {
+			System.out.println(article.getPriority());
+			System.out.println(article.getDate());
+		}
+		for (Article article : secondeArticles) {
+			System.out.println(article.getPriority());
+			System.out.println(article.getDate());
+		}
+		
 		return "index";
 	}
 }

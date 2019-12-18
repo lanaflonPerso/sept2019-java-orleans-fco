@@ -20,7 +20,7 @@
 			<div class="sendInfos col-1">
 				<p>Id</p>
 			</div>
-			<div class="sendInfos col-2">
+			<div class="sendInfos col-1">
 				<p>division</p>
 			</div>
 			<div class="sendMessage col-2">
@@ -32,8 +32,12 @@
 			<div class="sendDate col-2">
 				<p>Date</p>
 			</div>
+
 			<div class="sendDate col-2">
 				<p>Image</p>
+			</div>
+			<div class="SendInfos col-1">
+				<p>Priorité</p>
 			</div>
 			
 		</div>
@@ -41,7 +45,7 @@
 			<div class="col-1">
 				<span th:text="${article.id}">id</span>
 			</div>
-			<div class="col-2">
+			<div class="col-1">
 				<span th:text="${article.division}">Division</span>
 			</div>
 			<div class="col-2">
@@ -55,6 +59,9 @@
 			</div>
 			<div class="col-2">
 				<img class="img-fluid img-responsive" th:src="${article.picture}">
+			</div>
+			<div class="col-1">
+				<span th:text="${article.priority}">Priorité</span>
 			</div>
 			<div class="d-flex flex-column">
 				<a th:href="@{/admin/article(id=${article.id})}"><i class="fas fa-pen"></i></a>

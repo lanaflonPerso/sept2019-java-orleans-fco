@@ -2,14 +2,17 @@ package com.wildcodeschool.fco.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 
 @Entity
+@Table(name = "article")
 public class Article {
 	
 	@Id
@@ -18,14 +21,16 @@ public class Article {
 	private String division;
     private String author;
 	private String title;
+	@Column(length=10000)
 	private String content;
+	private int priority;
 	private Date date;
 	private String picture;
 
 	
 	public Article() {}
 	
-	public Article(Integer id, String division,  String author, String title, String content, Date date, String picture) {
+	public Article(Integer id, String division,  String author, String title, String content, Date date, String picture, int priority) {
 		this.id = id;
 		this.division=division;
 		this.author = author;
@@ -33,6 +38,7 @@ public class Article {
 		this.content = content;
 		this.date = date;
 		this.picture = picture;
+		this.priority = priority;
 	}
 
 
@@ -47,6 +53,15 @@ public class Article {
 		this.id = id;
 	}
 
+	
+
+	public int getPriority() {
+		return priority;
+	}
+
+	public void setPriority(int priority) {
+		this.priority = priority;
+	}
 
 	public String getDivision() {
 		return division;

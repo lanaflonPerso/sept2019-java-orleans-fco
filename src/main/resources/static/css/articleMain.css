@@ -15,6 +15,7 @@ body{
 	display: flex;
 	flex: start;
 }
+
 .thumbnail {
 	overflow:hidden;  
 	max-height: 650px;
@@ -73,9 +74,15 @@ body{
 .img-card{
 	text-align:center;
 	position:center;
-	max-width: auto;
+	max-width: 100%;
+	object-fit: cover;
 }
-
+.update{
+	color: #F6F4EA;
+}
+.category{
+	color : #DC143C ; 
+}
 .visualArticle:hover img{
 	
 	transform:scale(1.2);
@@ -84,7 +91,7 @@ body{
 .visualArticle img{
 	transition: all 3000ms;
 }
-/*VERSION SMARRPHONE*/
+/*VERSION SMARTPHONE*/
 @media screen and (max-width: 574px)
 {
 	.content h2, h3{
