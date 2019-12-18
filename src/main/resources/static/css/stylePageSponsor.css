@@ -1,0 +1,37 @@
+.afterPhoto {
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid #DC143C;
+}
+
+.element {
+	margin-top: 90px;
+	width: auto;
+	height: 250px;
+	padding: 10px;
+}
+
+@media only screen and (max-width: 992px) {
+	
+	.element {
+		margin-top: 60px;
+	}
+	
+	.afterPhoto h1 {
+		font-size: 29px;
+	}
+}
+	
+@media only screen and (max-width: 644px) {
+
+	.element {
+		margin-top: 25px;
+		height: 180px;
+	}
+
+@media only screen and (max-width: 376px) {
+	
+	.element {
+		height: 150px;
+	}
+}
