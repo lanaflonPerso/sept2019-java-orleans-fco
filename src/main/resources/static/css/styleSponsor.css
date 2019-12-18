@@ -11,7 +11,7 @@
 .secondLevelSponsor {
 	display: flex;
 	flex-wrap: wrap;
-	background: #323441;
+	background: #1c1c1c;
 	align-items: center;
 	justify-content: space-around;
     height: auto;
