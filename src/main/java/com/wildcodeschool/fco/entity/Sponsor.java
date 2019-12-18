@@ -3,15 +3,15 @@ package com.wildcodeschool.fco.entity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "SPONSOR")
 public class Sponsor {
 	
-	@Id @GeneratedValue
-	private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	@Column(length = 70)
 	private String name;
 	@Column(length = 100)
@@ -19,8 +19,10 @@ public class Sponsor {
 	@Column(length = 100)
 	private String urlPhoto;
 	private int priority;
-	public Sponsor(String name, String urlPageSponsor, String urlPhoto, int priority) {
+	
+	public Sponsor(Integer id, String name, String urlPageSponsor, String urlPhoto, int priority) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.urlPageSponsor = urlPageSponsor;
 		this.urlPhoto = urlPhoto;
@@ -31,11 +33,11 @@ public class Sponsor {
 		super();
 	}
 
-	public Long getId() {
+	public Integer getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(Integer id) {
 		this.id = id;
 	}
 
@@ -70,9 +72,5 @@ public class Sponsor {
 	public void setPriority(int priority) {
 		this.priority = priority;
 	}
-	
-	
-	
-	
 
 }

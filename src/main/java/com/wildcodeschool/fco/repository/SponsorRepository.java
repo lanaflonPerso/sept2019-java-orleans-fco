@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import com.wildcodeschool.fco.entity.Sponsor;
 
-	public interface SponsorRepository extends JpaRepository<Sponsor, Long> {
+	public interface SponsorRepository extends JpaRepository<Sponsor, Integer> {
 		@Query("select s from Sponsor s order by priority")
 		public List<Sponsor> sponsorSortByPriority ();
 

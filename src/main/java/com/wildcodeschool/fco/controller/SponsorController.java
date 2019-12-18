@@ -16,6 +16,6 @@ public class SponsorController {
 	@GetMapping("/sponsor")
 	public String sponsorPagePublic(Model model) {
 		model.addAttribute("sponsorList", sponsorRepository.sponsorSortByPriority());
-		return "sponsorPagePublic";
+		return "sponsorPage";
 	}
 }
