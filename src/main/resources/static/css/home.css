@@ -16,6 +16,10 @@
 	color: #fff;
 }
 
+.match-footer:hover {
+	background-color: #DC1432;
+}
+
 .match-infos {
 	padding-top: 30%;
 }

@@ -1,8 +1,6 @@
 package com.wildcodeschool.fco.controller;
 
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,9 +16,7 @@ import com.wildcodeschool.fco.repository.SponsorRepository;
 
 @Controller
 public class IndexController {
-	@Autowired
-	private SponsorRepository repository;
-	
+
 	@Autowired
 	private ArticleRepository articleRepository;
 	
@@ -28,6 +24,9 @@ public class IndexController {
 	List<Article> secondeArticles;
 	List<Article> thirdArticles;
 	List<Sponsor> sponsorList;
+  
+  @Autowired
+	private SponsorRepository sponsorRepository;
 
 	@Autowired
 	private EncounterRepository encounterRepository;
@@ -38,7 +37,6 @@ public class IndexController {
 		Encounter encounter = encounterRepository.findTopByOrderByTimeUntilMatchAsc();
 		SimpleDateFormat formatter = new SimpleDateFormat("dd MMM");
 		String formatedMatchDate = formatter.format(encounter.getTimeUntilMatch());
-		
 		
 		primaryArticles = articleRepository.priorityByDate(1);
 		if (primaryArticles.size() > 3) {
@@ -55,27 +53,13 @@ public class IndexController {
 			thirdArticles 	= articleRepository.priorityByDate(3).subList(0, 6);
 		}
 		
-		
-		
-		sponsorList = repository.sponsorSortByPriority();
-		
 		model.addAttribute("primaryArticles", primaryArticles);
 		model.addAttribute("secondeArticles", secondeArticles);
 		model.addAttribute("thirdArticles",thirdArticles);
-		model.addAttribute("sponsorList", sponsorList);
 		model.addAttribute("nextMatch", encounter);
 		model.addAttribute("formatedMatchDate", formatedMatchDate);
-		
-		System.out.println(new Date().getTime());
-		for (Article article : primaryArticles) {
-			System.out.println(article.getPriority());
-			System.out.println(article.getDate());
-		}
-		for (Article article : secondeArticles) {
-			System.out.println(article.getPriority());
-			System.out.println(article.getDate());
-		}
-		
+		model.addAttribute("sponsorList", sponsorRepository.sponsorSortByPriority());
+
 		return "index";
 	}
 }
